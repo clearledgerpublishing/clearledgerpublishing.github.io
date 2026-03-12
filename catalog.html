@@ -9,87 +9,94 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
-        .book-card { transition: all 0.3s ease; }
-        .book-card:hover { transform: translateY(-5px); }
+        .filter-btn:hover { border-bottom: 2px solid #1e3a8a; }
     </style>
 </head>
 <body class="bg-stone-50 text-stone-900">
 
-    <nav class="p-6 flex justify-between items-center border-b border-stone-200 bg-white">
+    <nav class="p-6 flex justify-between items-center border-b border-stone-200 bg-white sticky top-0 z-50">
         <div class="text-xl font-bold tracking-tighter serif italic text-blue-900">Clear Ledger Publishing</div>
         <div class="space-x-8 text-sm uppercase tracking-widest font-semibold text-stone-600">
             <a href="index.html" class="hover:text-blue-900 transition">Home</a>
-            <a href="catalog.html" class="text-blue-900 border-b border-blue-900">Catalog</a>
+            <a href="catalog.html" class="text-blue-900 border-b-2 border-blue-900">Catalog</a>
             <a href="submissions.html" class="hover:text-blue-900 transition">Submissions</a>
             <a href="about.html" class="hover:text-blue-900 transition">About</a>
         </div>
     </nav>
 
     <header class="py-16 px-6 text-center bg-white border-b border-stone-100">
-        <h1 class="text-5xl serif mb-4">The Catalog</h1>
-        <p class="text-blue-800 uppercase tracking-[0.3em] text-xs font-bold">The Intersection of Law, Ethics, & Technology</p>
+        <h1 class="text-5xl serif mb-6">The Catalog</h1>
+        <div class="flex justify-center space-x-8 text-xs font-bold uppercase tracking-widest text-stone-400">
+            <button class="filter-btn text-blue-900 border-b-2 border-blue-900 pb-1">All Titles</button>
+            <button class="filter-btn pb-1">Legal Tech</button>
+            <button class="filter-btn pb-1">Professional Guides</button>
+            <button class="filter-btn pb-1">Fiction</button>
+        </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-20">
+    <main class="max-w-7xl mx-auto px-6 py-20">
         
-        <div class="mb-20">
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 border-b-2 border-blue-900 pb-6">
-                <div>
-                    <h2 class="text-4xl serif text-blue-900">Alex Mercer</h2>
-                    <p class="text-stone-500 mt-2 italic text-lg">Legal Technologist & Pioneer of Open Source Legal AI</p>
-                </div>
-                <div class="bg-blue-900 text-white px-4 py-1 text-xs font-bold uppercase tracking-widest">Lead Author</div>
+        <section class="mb-24">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl serif text-blue-900">Legal Technology</h2>
+                <div class="h-px bg-stone-200 flex-grow"></div>
             </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <a href="books/ai-for-lawyers.html" class="group">
+                    <div class="aspect-[2/3] bg-stone-800 mb-4 overflow-hidden shadow-md group-hover:shadow-2xl transition-all">
+                        <img src="images/ai-for-lawyers.jpg" alt="AI for Lawyers" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold leading-tight group-hover:text-blue-800 transition">AI for Lawyers</h4>
+                    <p class="text-stone-500 text-xs mt-1 uppercase tracking-wider">Alex Mercer</p>
+                </a>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <a href="books/openclaw.html" class="group">
+                    <div class="aspect-[2/3] bg-blue-950 mb-4 overflow-hidden shadow-md group-hover:shadow-2xl transition-all">
+                        <img src="images/openclaw.jpg" alt="OpenClaw" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold leading-tight group-hover:text-blue-800 transition">The OpenClaw Series</h4>
+                    <p class="text-stone-500 text-xs mt-1 uppercase tracking-wider">Alex Mercer</p>
+                </a>
+
+                <div class="aspect-[2/3] border-2 border-dashed border-stone-200 flex items-center justify-center p-8 text-center bg-white">
+                    <p class="text-xs text-stone-400 italic">New Legal Tech Titles Coming Q4</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl serif text-blue-900">Professional Guides</h2>
+                <div class="h-px bg-stone-200 flex-grow"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <a href="#" class="group">
+                    <div class="aspect-[2/3] bg-stone-300 mb-4 overflow-hidden shadow-md group-hover:shadow-2xl transition-all border-l-4 border-stone-500">
+                        <img src="images/book-ledger.jpg" alt="The Modern Ledger" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-bold leading-tight group-hover:text-blue-800 transition">The Modern Ledger</h4>
+                    <p class="text-stone-500 text-xs mt-1 uppercase tracking-wider">J.D. Sterling</p>
+                </a>
                 
-                <div class="space-y-8">
-                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] text-stone-400 border-l-2 border-stone-300 pl-4">Legal AI Series</h3>
-                    
-                    <div class="book-card group flex gap-6 items-start">
-                        <div class="w-40 flex-shrink-0 aspect-[2/3] bg-stone-800 shadow-xl border-l-4 border-blue-700 overflow-hidden">
-                            <img src="images/ai-for-lawyers.jpg" alt="AI for Lawyers" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition">
-                        </div>
-                        <div class="space-y-3">
-                            <h4 class="text-2xl serif group-hover:text-blue-800 transition">AI for Lawyers</h4>
-                            <p class="text-stone-600 text-sm leading-relaxed">The essential framework for implementing Generative AI within legal workflows while maintaining ethical compliance and precision.</p>
-                            <a href="books/ai-for-lawyers.html" class="inline-block text-xs font-bold uppercase tracking-widest text-blue-900 border-b border-blue-900 pb-1">View Details</a>
-                        </div>
-                    </div>
-
-                    <div class="book-card group flex gap-6 items-start pt-8">
-                        <div class="w-40 flex-shrink-0 aspect-[2/3] bg-blue-950 shadow-xl border-l-4 border-stone-500 overflow-hidden">
-                            <img src="images/openclaw.jpg" alt="OpenClaw" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition">
-                        </div>
-                        <div class="space-y-3">
-                            <h4 class="text-2xl serif group-hover:text-blue-800 transition">The OpenClaw Series</h4>
-                            <p class="text-stone-600 text-sm leading-relaxed">A deep dive into open-source legal intelligence. Documenting the shift toward transparent, accessible legal technology.</p>
-                            <a href="books/openclaw.html" class="inline-block text-xs font-bold uppercase tracking-widest text-blue-900 border-b border-blue-900 pb-1">View Details</a>
-                        </div>
-                    </div>
                 </div>
+        </section>
 
-                <div class="space-y-8">
-                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] text-stone-400 border-l-2 border-stone-300 pl-4">Professional Insights</h3>
-                    
-                    <div class="p-8 border border-stone-200 bg-white shadow-sm italic text-stone-500">
-                        <p class="mb-4">"Clear Ledger is committed to documenting the evolution of the legal ledger—where software meets the statute."</p>
-                        <p class="text-xs font-bold uppercase tracking-widest text-blue-900">— Alex Mercer</p>
-                    </div>
-
-                    <div class="aspect-video bg-stone-100 border border-stone-200 flex flex-col items-center justify-center p-6 text-center">
-                        <span class="serif italic text-stone-400 mb-2">Upcoming Technical Guide</span>
-                        <span class="text-[10px] uppercase tracking-widest text-stone-400">Scheduled for Q4 2026</span>
-                    </div>
-                </div>
-
+        <section class="border-t border-stone-200 pt-20">
+            <h2 class="text-sm font-bold uppercase tracking-[0.3em] text-stone-400 mb-10 text-center">Our Authors</h2>
+            <div class="flex flex-wrap justify-center gap-x-12 gap-y-4">
+                <a href="#" class="serif text-xl hover:text-blue-800 italic transition">Alex Mercer</a>
+                <a href="#" class="serif text-xl hover:text-blue-800 italic transition">J.D. Sterling</a>
+                <a href="#" class="serif text-xl hover:text-blue-800 italic transition">Elena Thorne</a>
+                <a href="#" class="serif text-xl hover:text-blue-800 italic transition">Daniel Grace</a>
             </div>
-        </div>
+        </section>
 
     </main>
 
-    <footer class="bg-white border-t border-stone-200 py-12 px-6 text-center">
-        <p class="text-[10px] uppercase tracking-widest text-stone-400">Clear Ledger Publishing | Built for the Modern Practitioner | Las Vegas, NV</p>
+    <footer class="bg-stone-900 text-stone-400 py-16 px-6 text-center">
+        <p class="text-[10px] uppercase tracking-widest">Clear Ledger Publishing | Precision in Prose | Las Vegas, NV</p>
     </footer>
 
 </body>
