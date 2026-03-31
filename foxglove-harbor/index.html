@@ -6,8 +6,9 @@
   <title>Foxglove Harbor Witches | Paranormal Romance Series</title>
   <meta
     name="description"
-    content="Discover Foxglove Harbor Witches, a moody paranormal romance series filled with witches, wolves, fog, secrets, and interconnected love stories."
+    content="Discover Foxglove Harbor Witches, a paranormal romance series filled with witches, wolves, coastal magic, dangerous secrets, and interconnected love stories."
   />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,600 +16,485 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
+
   <style>
     :root {
-      --bg: #0e0a13;
-      --bg-soft: #15101c;
-      --panel: rgba(27, 19, 36, 0.78);
-      --panel-strong: rgba(20, 14, 29, 0.92);
-      --line: rgba(224, 198, 155, 0.18);
-      --text: #f4efe8;
-      --muted: #cabfb0;
-      --gold: #dfc190;
-      --gold-soft: #f2dfbe;
-      --plum: #5f3d67;
-      --rose: #a56c86;
-      --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+      --bg: #0b0910;
+      --bg2: #15101c;
+      --panel: rgba(28, 20, 38, 0.82);
+      --panel-soft: rgba(255, 255, 255, 0.04);
+      --line: rgba(231, 201, 156, 0.16);
+      --text: #f5efe7;
+      --muted: #cbbfb1;
+      --gold: #e0c18f;
+      --gold-soft: #f3dfbf;
+      --plum: #5d3d67;
+      --shadow: 0 18px 40px rgba(0, 0, 0, 0.34);
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: "Inter", sans-serif;
-      background:
-        radial-gradient(circle at top, rgba(108, 71, 122, 0.18), transparent 32%),
-        linear-gradient(180deg, #120d18 0%, #0d0912 100%);
       color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(113, 71, 129, 0.18), transparent 28%),
+        linear-gradient(180deg, #120d17 0%, #0b0910 100%);
     }
 
-    h1, h2, h3, h4, .display-font {
+    h1, h2, h3, .display-font {
       font-family: "Cormorant Garamond", serif;
     }
 
-    .site-shell {
+    .hero {
       position: relative;
       overflow: hidden;
+      isolation: isolate;
     }
 
-    .hero-bg::before {
+    .hero::before {
       content: "";
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(180deg, rgba(8, 6, 11, 0.12) 0%, rgba(8, 6, 11, 0.72) 70%, rgba(8, 6, 11, 0.9) 100%),
-        radial-gradient(circle at 20% 20%, rgba(190, 143, 207, 0.18), transparent 24%),
-        radial-gradient(circle at 80% 18%, rgba(116, 167, 190, 0.16), transparent 20%),
-        url("images/hero-harbor-bg.jpg") center/cover no-repeat;
-      z-index: 0;
+        linear-gradient(180deg, rgba(10, 7, 14, 0.35) 0%, rgba(10, 7, 14, 0.72) 58%, rgba(10, 7, 14, 0.92) 100%),
+        radial-gradient(circle at 18% 18%, rgba(187, 140, 207, 0.12), transparent 22%),
+        radial-gradient(circle at 80% 16%, rgba(117, 155, 195, 0.10), transparent 20%);
+      z-index: -2;
     }
 
-    .mist-layer::after {
+    .hero::after {
       content: "";
       position: absolute;
-      inset: auto 0 0 0;
-      height: 200px;
+      inset: 0;
       background:
-        linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(230, 224, 236, 0.04) 30%, rgba(230, 224, 236, 0) 100%);
-      pointer-events: none;
+        linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 100%);
+      z-index: -1;
     }
 
-    .glass-panel {
+    .glass {
       background: var(--panel);
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(10px);
     }
 
-    .section-panel {
-      background: var(--panel-strong);
+    .panel {
+      background: rgba(20, 15, 28, 0.92);
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
     }
 
-    .gold-kicker {
+    .kicker {
       color: var(--gold-soft);
-      letter-spacing: 0.2em;
       text-transform: uppercase;
-      font-size: 0.78rem;
-      font-weight: 600;
+      letter-spacing: 0.18em;
+      font-size: 0.76rem;
+      font-weight: 700;
     }
 
-    .button-primary {
+    .btn-primary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
-      background: linear-gradient(135deg, #d9bb89 0%, #b98b57 100%);
-      color: #1a1210;
-      font-weight: 700;
       border-radius: 9999px;
       padding: 0.95rem 1.35rem;
-      transition: transform 0.2s ease, opacity 0.2s ease;
+      font-weight: 700;
+      background: linear-gradient(135deg, #e0c18f 0%, #b98757 100%);
+      color: #1a120e;
+      transition: transform 0.18s ease, opacity 0.18s ease;
     }
 
-    .button-primary:hover {
+    .btn-primary:hover {
       transform: translateY(-1px);
       opacity: 0.96;
     }
 
-    .button-secondary {
+    .btn-secondary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
-      background: rgba(255,255,255,0.04);
-      color: var(--text);
-      font-weight: 600;
-      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 9999px;
       padding: 0.95rem 1.35rem;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      font-weight: 600;
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: transform 0.18s ease, border-color 0.18s ease;
     }
 
-    .button-secondary:hover {
+    .btn-secondary:hover {
       transform: translateY(-1px);
-      border-color: rgba(223, 193, 144, 0.38);
+      border-color: rgba(224, 193, 143, 0.32);
+    }
+
+    .mini-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 1.25rem;
     }
 
     .book-card {
       position: relative;
       overflow: hidden;
       border-radius: 1.5rem;
-      background: linear-gradient(180deg, rgba(255,255,255,0.035) 0%, rgba(255,255,255,0.02) 100%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.02) 100%);
       border: 1px solid rgba(255,255,255,0.08);
       box-shadow: var(--shadow);
-      transition: transform 0.22s ease, border-color 0.22s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
     .book-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(223, 193, 144, 0.28);
+      border-color: rgba(224, 193, 143, 0.28);
     }
 
-    .book-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 30%);
-      pointer-events: none;
-    }
-
-    .cover-frame {
+    .cover {
+      position: relative;
+      aspect-ratio: 2 / 3;
       border-radius: 1rem;
       overflow: hidden;
       border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.03);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.28);
-    }
-
-    .mood-badge {
-      border: 1px solid rgba(223, 193, 144, 0.18);
-      background: rgba(255,255,255,0.035);
-      border-radius: 9999px;
-      padding: 0.75rem 1rem;
-    }
-
-    .image-strip {
-      min-height: 280px;
-      border-radius: 1.75rem;
-      overflow: hidden;
-      border: 1px solid var(--line);
       background:
-        linear-gradient(180deg, rgba(8, 6, 11, 0.16) 0%, rgba(8, 6, 11, 0.58) 100%),
-        url("images/harbor-divider-banner.jpg") center/cover no-repeat;
-      box-shadow: var(--shadow);
+        linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.015) 100%),
+        linear-gradient(145deg, rgba(95,61,103,0.85) 0%, rgba(26,20,35,0.95) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.28);
     }
 
-    .nav-link {
-      color: rgba(244, 239, 232, 0.88);
-      transition: color 0.2s ease;
+    .cover::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,0.08), transparent 24%),
+        radial-gradient(circle at 70% 80%, rgba(224,193,143,0.08), transparent 26%);
+      pointer-events: none;
     }
 
-    .nav-link:hover {
+    .cover-label {
+      position: relative;
+      z-index: 1;
+      max-width: 80%;
+    }
+
+    .cover-label span {
+      display: block;
+    }
+
+    .cover-book {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .cover-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.6rem;
+      line-height: 1.02;
+      font-weight: 700;
+      color: white;
+    }
+
+    .link {
+      color: rgba(245, 239, 231, 0.88);
+      transition: color 0.18s ease;
+    }
+
+    .link:hover {
       color: var(--gold-soft);
     }
 
-    .soft-line {
+    .divider {
       height: 1px;
-      background: linear-gradient(90deg, transparent 0%, rgba(223, 193, 144, 0.28) 50%, transparent 100%);
+      background: linear-gradient(90deg, transparent 0%, rgba(224,193,143,0.28) 50%, transparent 100%);
     }
 
-    .book-glow-1 { box-shadow: 0 18px 40px rgba(144, 96, 182, 0.14); }
-    .book-glow-2 { box-shadow: 0 18px 40px rgba(98, 166, 139, 0.14); }
-    .book-glow-3 { box-shadow: 0 18px 40px rgba(84, 120, 186, 0.14); }
-    .book-glow-4 { box-shadow: 0 18px 40px rgba(112, 88, 172, 0.14); }
-    .book-glow-5 { box-shadow: 0 18px 40px rgba(179, 118, 86, 0.14); }
+    .cta-band {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.015) 100%),
+        rgba(20, 15, 28, 0.94);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
 
     @media (prefers-reduced-motion: reduce) {
       * {
-        scroll-behavior: auto !important;
         transition: none !important;
+        scroll-behavior: auto !important;
       }
     }
   </style>
 </head>
 <body>
-  <div class="site-shell">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-black">
-      Skip to content
-    </a>
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-black">
+    Skip to content
+  </a>
 
-    <header class="relative z-20 border-b border-white/10 bg-black/20 backdrop-blur-md">
-      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <a href="../index.html" class="text-sm font-semibold tracking-[0.18em] text-[var(--gold-soft)] uppercase">
-          Clear Ledger Publishing
-        </a>
+  <header class="border-b border-white/10 bg-black/20 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="../index.html" class="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--gold-soft)]">
+        Clear Ledger Publishing
+      </a>
 
-        <nav aria-label="Primary" class="hidden gap-8 md:flex">
-          <a href="../index.html" class="nav-link text-sm font-medium">Home</a>
-          <a href="../catalog.html" class="nav-link text-sm font-medium">Catalog</a>
-          <a href="../about.html" class="nav-link text-sm font-medium">About</a>
-          <a href="../contact.html" class="nav-link text-sm font-medium">Contact</a>
-        </nav>
+      <nav class="hidden gap-8 md:flex" aria-label="Primary">
+        <a href="../index.html" class="link text-sm font-medium">Home</a>
+        <a href="../catalog.html" class="link text-sm font-medium">Catalog</a>
+        <a href="../about.html" class="link text-sm font-medium">About</a>
+        <a href="../contact.html" class="link text-sm font-medium">Contact</a>
+      </nav>
 
-        <a href="reading-order.html" class="button-secondary text-sm">
-          Reading Order
+      <a href="reading-order.html" class="btn-secondary text-sm">Reading Order</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+        <div class="max-w-4xl">
+          <p class="kicker mb-5">A Foxglove Harbor Witches Series</p>
+
+          <h1 class="text-5xl font-semibold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
+            Witches. Wolves. Desire. Secrets buried beneath the fog.
+          </h1>
+
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)] sm:text-xl">
+            Foxglove Harbor is a moody paranormal romance series set in a coastal town where magic runs quiet,
+            danger wears a familiar face, and every love story comes with teeth.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a href="#series-books" class="btn-primary">Browse the Series</a>
+            <a href="reading-order.html" class="btn-secondary">Reading Order</a>
+          </div>
+        </div>
+
+        <div class="mt-12 grid gap-4 md:grid-cols-3">
+          <div class="mini-card p-5">
+            <p class="kicker mb-2">Core Promise</p>
+            <p class="text-sm leading-7 text-[var(--muted)]">
+              Atmospheric romance with emotional tension, dangerous men, and women whose magic changes the town.
+            </p>
+          </div>
+
+          <div class="mini-card p-5">
+            <p class="kicker mb-2">For Readers Who Love</p>
+            <p class="text-sm leading-7 text-[var(--muted)]">
+              Small-town magic, protective wolf heroes, layered heroines, and interconnected series arcs.
+            </p>
+          </div>
+
+          <div class="mini-card p-5">
+            <p class="kicker mb-2">Start Here</p>
+            <p class="text-sm leading-7 text-[var(--muted)]">
+              Begin with Book One, then follow the harbor deeper as each romance opens the world wider.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-14 lg:px-8">
+      <div class="panel rounded-[2rem] p-8 md:p-10">
+        <div class="max-w-3xl">
+          <p class="kicker mb-4">Enter Foxglove Harbor</p>
+          <h2 class="text-4xl font-semibold text-white sm:text-5xl">
+            A connected paranormal romance world built for binge readers.
+          </h2>
+          <p class="mt-5 text-lg leading-8 text-[var(--muted)]">
+            Standalone central couples, recurring town lore, and a dark coastal atmosphere designed to pull
+            readers from one book to the next.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="series-books" class="mx-auto max-w-7xl px-6 py-4 lg:px-8 lg:py-8">
+      <div class="mb-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div class="max-w-3xl">
+          <p class="kicker mb-4">The Books</p>
+          <h2 class="text-4xl font-semibold text-white sm:text-5xl">
+            Start with the first spark. Stay for the whole harbor.
+          </h2>
+          <p class="mt-5 text-lg leading-8 text-[var(--muted)]">
+            Book One is the clearest entry point. The rest deepen the world, the danger, and the romance.
+          </p>
+        </div>
+
+        <a href="reading-order.html" class="btn-secondary w-fit">
+          View Series Reading Order
         </a>
       </div>
-    </header>
 
-    <main id="main-content">
-      <section class="hero-bg mist-layer relative isolate overflow-hidden">
-        <div class="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-28 relative z-10">
-          <div class="flex flex-col justify-center">
-            <p class="gold-kicker mb-5">A Foxglove Harbor Witches Series</p>
-
-            <h1 class="max-w-4xl text-5xl font-semibold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
-              Witches. Wolves. Desire. Secrets buried beneath the fog.
-            </h1>
-
-            <p class="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)] sm:text-xl">
-              Foxglove Harbor is a moody paranormal romance series set in a coastal town where magic runs quiet,
-              danger wears a familiar face, and every love story comes with teeth.
-            </p>
-
-            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a href="#series-books" class="button-primary">Browse the Series</a>
-              <a href="reading-order.html" class="button-secondary">Reading Order</a>
-            </div>
-
-            <div class="mt-10 grid gap-4 sm:grid-cols-3">
-              <div class="glass-panel rounded-2xl p-5">
-                <p class="gold-kicker mb-2">Core Promise</p>
-                <p class="text-sm leading-7 text-[var(--muted)]">
-                  Atmospheric romance with emotional tension, dangerous men, and women whose magic changes the town.
-                </p>
-              </div>
-              <div class="glass-panel rounded-2xl p-5">
-                <p class="gold-kicker mb-2">For Readers Who Love</p>
-                <p class="text-sm leading-7 text-[var(--muted)]">
-                  Small-town magic, protective wolf heroes, layered heroines, and interconnected series arcs.
-                </p>
-              </div>
-              <div class="glass-panel rounded-2xl p-5">
-                <p class="gold-kicker mb-2">Start Here</p>
-                <p class="text-sm leading-7 text-[var(--muted)]">
-                  Begin with Book One, then follow the harbor deeper as each romance opens the world wider.
-                </p>
+      <div class="grid gap-8 xl:grid-cols-[1.2fr_1fr]">
+        <article class="book-card p-6 md:p-8">
+          <div class="grid gap-6 sm:grid-cols-[220px_1fr] sm:items-start">
+            <div class="cover">
+              <div class="cover-label">
+                <span class="cover-book">Book One</span>
+                <span class="cover-title">The Bookshop Witch and the Wolf Sheriff</span>
               </div>
             </div>
-          </div>
 
-          <div class="flex items-center justify-center lg:justify-end">
-            <div class="glass-panel w-full max-w-xl rounded-[2rem] p-5">
-              <img
-                src="images/series-featured-collage.jpg"
-                alt="Featured Foxglove Harbor Witches series artwork"
-                class="w-full rounded-[1.5rem] object-cover"
-              />
-              <div class="mt-5 grid gap-4 sm:grid-cols-2">
-                <img
-                  src="images/series-mood-promo-1.jpg"
-                  alt="Atmospheric harbor promotional artwork"
-                  class="h-40 w-full rounded-2xl object-cover"
-                />
-                <img
-                  src="images/series-mood-promo-2.jpg"
-                  alt="Romantic paranormal promotional artwork"
-                  class="h-40 w-full rounded-2xl object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <div class="section-panel rounded-[2rem] p-8 md:p-10">
-          <div class="max-w-3xl">
-            <p class="gold-kicker mb-4">Enter Foxglove Harbor</p>
-            <h2 class="text-4xl font-semibold text-white sm:text-5xl">
-              A connected paranormal romance world built for binge readers.
-            </h2>
-            <p class="mt-5 text-lg leading-8 text-[var(--muted)]">
-              Standalone central couples. Recurring town lore. A series atmosphere designed to pull readers from one
-              book to the next.
-            </p>
-          </div>
-
-          <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            <div class="mood-badge">
-              <p class="text-sm font-semibold text-[var(--gold-soft)]">Protective wolf heroes</p>
-            </div>
-            <div class="mood-badge">
-              <p class="text-sm font-semibold text-[var(--gold-soft)]">Small-town witch magic</p>
-            </div>
-            <div class="mood-badge">
-              <p class="text-sm font-semibold text-[var(--gold-soft)]">Interconnected romances</p>
-            </div>
-            <div class="mood-badge">
-              <p class="text-sm font-semibold text-[var(--gold-soft)]">Fog, secrets, and longing</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="mx-auto max-w-7xl px-6 pb-6 lg:px-8">
-        <div class="image-strip flex items-end p-8 sm:p-10">
-          <div class="max-w-2xl">
-            <p class="gold-kicker mb-3">Series Atmosphere</p>
-            <h2 class="text-3xl font-semibold text-white sm:text-4xl">
-              Romantic. Haunted. Cinematic.
-            </h2>
-            <p class="mt-4 text-base leading-7 text-white/85 sm:text-lg">
-              Use this banner space for a custom harbor image or mood graphic that visually bridges the books and gives
-              the whole series page a stronger emotional identity.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="series-books" class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <div class="mb-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <div class="max-w-3xl">
-            <p class="gold-kicker mb-4">The Books</p>
-            <h2 class="text-4xl font-semibold text-white sm:text-5xl">
-              Start with the first spark. Stay for the whole harbor.
-            </h2>
-            <p class="mt-5 text-lg leading-8 text-[var(--muted)]">
-              New readers should be able to see the entire series in one glance, then click straight into a book page
-              or the reading order.
-            </p>
-          </div>
-
-          <a href="reading-order.html" class="button-secondary w-fit">
-            View Series Reading Order
-          </a>
-        </div>
-
-        <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          <article class="book-card p-6 book-glow-1">
-            <div class="grid gap-6 sm:grid-cols-[140px_1fr] sm:items-start">
-              <div class="cover-frame">
-                <img
-                  src="images/book-1-cover.jpg"
-                  alt="Cover for Book One, The Bookshop Witch and the Wolf Sheriff"
-                  class="h-full w-full object-cover"
-                />
-              </div>
-              <div>
-                <p class="gold-kicker mb-2">Book One</p>
-                <h3 class="text-3xl font-semibold text-white">
-                  The Bookshop Witch and the Wolf Sheriff
-                </h3>
-                <p class="mt-4 text-base leading-7 text-[var(--muted)]">
-                  The gateway into Foxglove Harbor: a romantic, atmospheric beginning that introduces the town, the
-                  magic, and the kind of men who are dangerous for all the right reasons.
-                </p>
-                <div class="mt-5 flex flex-wrap gap-3">
-                  <a href="books/bookshop-witch-and-the-wolf-sheriff.html" class="button-primary text-sm">
-                    View Book Page
-                  </a>
-                  <span class="button-secondary text-sm">Best starting point</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="book-card p-6 book-glow-2">
-            <div class="grid gap-6 sm:grid-cols-[140px_1fr] sm:items-start">
-              <div class="cover-frame">
-                <img
-                  src="images/book-2-cover.jpg"
-                  alt="Cover for Book Two, The Apothecary Witch and the Wolf Detective"
-                  class="h-full w-full object-cover"
-                />
-              </div>
-              <div>
-                <p class="gold-kicker mb-2">Book Two</p>
-                <h3 class="text-3xl font-semibold text-white">
-                  The Apothecary Witch and the Wolf Detective
-                </h3>
-                <p class="mt-4 text-base leading-7 text-[var(--muted)]">
-                  A darker case, sharper chemistry, and deeper secrets. The harbor grows stranger as love and danger
-                  move closer together.
-                </p>
-                <div class="mt-5">
-                  <a href="books/apothecary-witch-and-the-wolf-detective.html" class="button-primary text-sm">
-                    View Book Page
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="book-card p-6 book-glow-3">
-            <div class="grid gap-6 sm:grid-cols-[140px_1fr] sm:items-start">
-              <div class="cover-frame">
-                <img
-                  src="images/book-3-cover.jpg"
-                  alt="Cover for Book Three, The Lighthouse Witch and the Sea Wolf"
-                  class="h-full w-full object-cover"
-                />
-              </div>
-              <div>
-                <p class="gold-kicker mb-2">Book Three</p>
-                <h3 class="text-3xl font-semibold text-white">
-                  The Lighthouse Witch and the Sea Wolf
-                </h3>
-                <p class="mt-4 text-base leading-7 text-[var(--muted)]">
-                  Storm-swept longing, coastal danger, and a romance shaped by isolation, old wounds, and the pull of
-                  the sea.
-                </p>
-                <div class="mt-5">
-                  <a href="books/lighthouse-witch-and-the-sea-wolf.html" class="button-primary text-sm">
-                    View Book Page
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="book-card p-6 book-glow-4">
-            <div class="grid gap-6 sm:grid-cols-[140px_1fr] sm:items-start">
-              <div class="cover-frame">
-                <img
-                  src="images/book-4-cover.jpg"
-                  alt="Cover for Book Four, The Librarian Witch and the Shadow Wolf"
-                  class="h-full w-full object-cover"
-                />
-              </div>
-              <div>
-                <p class="gold-kicker mb-2">Book Four</p>
-                <h3 class="text-3xl font-semibold text-white">
-                  The Librarian Witch and the Shadow Wolf
-                </h3>
-                <p class="mt-4 text-base leading-7 text-[var(--muted)]">
-                  A quieter kind of danger. Buried knowledge, hidden loyalties, and a romance that emerges from the
-                  shadows.
-                </p>
-                <div class="mt-5">
-                  <a href="books/librarian-witch-and-the-shadow-wolf.html" class="button-primary text-sm">
-                    View Book Page
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="book-card p-6 book-glow-5 md:col-span-2 xl:col-span-1">
-            <div class="grid gap-6 sm:grid-cols-[140px_1fr] sm:items-start">
-              <div class="cover-frame">
-                <img
-                  src="images/book-5-cover.jpg"
-                  alt="Cover for Book Five, The Bakery Witch and the Iron Wolf"
-                  class="h-full w-full object-cover"
-                />
-              </div>
-              <div>
-                <p class="gold-kicker mb-2">Book Five</p>
-                <h3 class="text-3xl font-semibold text-white">
-                  The Bakery Witch and the Iron Wolf
-                </h3>
-                <p class="mt-4 text-base leading-7 text-[var(--muted)]">
-                  Warmth on the surface, pressure underneath. Comfort, steel, hunger, and a love story with bite.
-                </p>
-                <div class="mt-5">
-                  <a href="books/bakery-witch-and-the-iron-wolf.html" class="button-primary text-sm">
-                    View Book Page
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <div class="grid gap-8 lg:grid-cols-[1fr_0.95fr]">
-          <div class="section-panel rounded-[2rem] p-8 md:p-10">
-            <p class="gold-kicker mb-4">New Readers</p>
-            <h2 class="text-4xl font-semibold text-white sm:text-5xl">
-              Where should someone begin?
-            </h2>
-            <p class="mt-5 text-lg leading-8 text-[var(--muted)]">
-              Book One is the cleanest entry point. It establishes the emotional tone, the supernatural framework, and
-              the coastal atmosphere that defines the rest of the series.
-            </p>
-            <div class="mt-8">
-              <a href="books/bookshop-witch-and-the-wolf-sheriff.html" class="button-primary">
-                Start with Book One
-              </a>
-            </div>
-          </div>
-
-          <div class="section-panel rounded-[2rem] p-8 md:p-10">
-            <p class="gold-kicker mb-4">Series Navigation</p>
-            <h2 class="text-4xl font-semibold text-white sm:text-5xl">
-              Want the bigger picture first?
-            </h2>
-            <p class="mt-5 text-lg leading-8 text-[var(--muted)]">
-              Use the reading order page for the simplest path through the harbor. It is the best place to explain
-              release order, future titles, and how interconnected the romances are.
-            </p>
-            <div class="mt-8">
-              <a href="reading-order.html" class="button-secondary">
-                Open Reading Order
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="mx-auto max-w-7xl px-6 pb-16 lg:px-8">
-        <div class="section-panel rounded-[2rem] p-8 md:p-10">
-          <div class="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
             <div>
-              <p class="gold-kicker mb-4">Why this page exists</p>
-              <h2 class="text-4xl font-semibold text-white sm:text-5xl">
-                This is the sales page for the series, not just a directory.
-              </h2>
-              <p class="mt-5 text-lg leading-8 text-[var(--muted)]">
-                The goal is simple: make it immediately clear what Foxglove Harbor is, who it is for, and where a new
-                reader should start. The page should feel like the series feels—romantic, haunted, cinematic, and easy
-                to navigate.
+              <p class="kicker mb-2">Best place to begin</p>
+              <h3 class="text-4xl font-semibold text-white">
+                The Bookshop Witch and the Wolf Sheriff
+              </h3>
+              <p class="mt-4 text-base leading-8 text-[var(--muted)]">
+                The gateway into Foxglove Harbor: a romantic, atmospheric beginning that introduces the town,
+                the magic, and the kind of men who are dangerous for all the right reasons.
               </p>
-            </div>
-
-            <div class="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-6">
-              <p class="gold-kicker mb-4">Reader Path</p>
-              <ol class="space-y-4 text-base leading-7 text-[var(--muted)]">
-                <li><span class="font-semibold text-white">1.</span> Understand the series promise in seconds.</li>
-                <li><span class="font-semibold text-white">2.</span> See all current books in one view.</li>
-                <li><span class="font-semibold text-white">3.</span> Click into an individual book page or reading order.</li>
-                <li><span class="font-semibold text-white">4.</span> Move naturally into purchase links later.</li>
-              </ol>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a href="books/bookshop-witch-and-the-wolf-sheriff.html" class="btn-primary text-sm">
+                  View Book Page
+                </a>
+                <a href="reading-order.html" class="btn-secondary text-sm">
+                  See Reading Order
+                </a>
+              </div>
             </div>
           </div>
+        </article>
+
+        <div class="grid gap-6 sm:grid-cols-2">
+          <article class="book-card p-5">
+            <div class="cover mb-4">
+              <div class="cover-label">
+                <span class="cover-book">Book Two</span>
+                <span class="cover-title">The Apothecary Witch and the Wolf Detective</span>
+              </div>
+            </div>
+            <p class="text-sm leading-7 text-[var(--muted)]">
+              A darker case, sharper chemistry, and deeper secrets.
+            </p>
+            <a href="books/apothecary-witch-and-the-wolf-detective.html" class="mt-4 inline-block link font-semibold">
+              View book page →
+            </a>
+          </article>
+
+          <article class="book-card p-5">
+            <div class="cover mb-4">
+              <div class="cover-label">
+                <span class="cover-book">Book Three</span>
+                <span class="cover-title">The Lighthouse Witch and the Sea Wolf</span>
+              </div>
+            </div>
+            <p class="text-sm leading-7 text-[var(--muted)]">
+              Storm-swept longing, coastal danger, and the pull of the sea.
+            </p>
+            <a href="books/lighthouse-witch-and-the-sea-wolf.html" class="mt-4 inline-block link font-semibold">
+              View book page →
+            </a>
+          </article>
+
+          <article class="book-card p-5">
+            <div class="cover mb-4">
+              <div class="cover-label">
+                <span class="cover-book">Book Four</span>
+                <span class="cover-title">The Librarian Witch and the Shadow Wolf</span>
+              </div>
+            </div>
+            <p class="text-sm leading-7 text-[var(--muted)]">
+              Buried knowledge, hidden loyalties, and romance emerging from the shadows.
+            </p>
+            <a href="books/librarian-witch-and-the-shadow-wolf.html" class="mt-4 inline-block link font-semibold">
+              View book page →
+            </a>
+          </article>
+
+          <article class="book-card p-5">
+            <div class="cover mb-4">
+              <div class="cover-label">
+                <span class="cover-book">Book Five</span>
+                <span class="cover-title">The Bakery Witch and the Iron Wolf</span>
+              </div>
+            </div>
+            <p class="text-sm leading-7 text-[var(--muted)]">
+              Warmth on the surface, pressure underneath, and a love story with bite.
+            </p>
+            <a href="books/bakery-witch-and-the-iron-wolf.html" class="mt-4 inline-block link font-semibold">
+              View book page →
+            </a>
+          </article>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer class="border-t border-white/10 bg-black/30">
-      <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-        <div class="soft-line mb-8"></div>
-
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <section class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div class="cta-band rounded-[2rem] p-8 md:p-10">
+        <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
-            <h2 class="display-font text-3xl font-semibold text-white">
-              Foxglove Harbor Witches
+            <p class="kicker mb-4">New Readers</p>
+            <h2 class="text-4xl font-semibold text-white sm:text-5xl">
+              Ready to step into Foxglove Harbor?
             </h2>
-            <p class="mt-4 max-w-md text-base leading-7 text-[var(--muted)]">
-              A paranormal romance series published by Clear Ledger Publishing. Built for discoverability, readability,
-              and bingeable series navigation.
+            <p class="mt-5 max-w-3xl text-lg leading-8 text-[var(--muted)]">
+              Start with Book One for the strongest first impression, or use the reading order page
+              if you want the full shape of the series first.
             </p>
           </div>
 
-          <div>
-            <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--gold-soft)]">
-              Series Pages
-            </h3>
-            <ul class="mt-4 space-y-3 text-sm">
-              <li><a href="reading-order.html" class="nav-link">Reading Order</a></li>
-              <li><a href="books/bookshop-witch-and-the-wolf-sheriff.html" class="nav-link">Book One</a></li>
-              <li><a href="books/apothecary-witch-and-the-wolf-detective.html" class="nav-link">Book Two</a></li>
-              <li><a href="books/lighthouse-witch-and-the-sea-wolf.html" class="nav-link">Book Three</a></li>
-              <li><a href="books/librarian-witch-and-the-shadow-wolf.html" class="nav-link">Book Four</a></li>
-              <li><a href="books/bakery-witch-and-the-iron-wolf.html" class="nav-link">Book Five</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--gold-soft)]">
-              Publisher
-            </h3>
-            <ul class="mt-4 space-y-3 text-sm">
-              <li><a href="../catalog.html" class="nav-link">Catalog</a></li>
-              <li><a href="../about.html" class="nav-link">About</a></li>
-              <li><a href="../contact.html" class="nav-link">Contact</a></li>
-              <li><a href="../index.html" class="nav-link">Clear Ledger Publishing Home</a></li>
-            </ul>
+          <div class="flex flex-col gap-4 sm:flex-row lg:flex-col">
+            <a href="books/bookshop-witch-and-the-wolf-sheriff.html" class="btn-primary">
+              Start with Book One
+            </a>
+            <a href="reading-order.html" class="btn-secondary">
+              Open Reading Order
+            </a>
           </div>
         </div>
       </div>
-    </footer>
-  </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-black/30">
+    <div class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+      <div class="divider mb-8"></div>
+
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <h2 class="display-font text-3xl font-semibold text-white">
+            Foxglove Harbor Witches
+          </h2>
+          <p class="mt-4 max-w-md text-base leading-7 text-[var(--muted)]">
+            A paranormal romance series published by Clear Ledger Publishing.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--gold-soft)]">
+            Series Pages
+          </h3>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a href="reading-order.html" class="link">Reading Order</a></li>
+            <li><a href="books/bookshop-witch-and-the-wolf-sheriff.html" class="link">Book One</a></li>
+            <li><a href="books/apothecary-witch-and-the-wolf-detective.html" class="link">Book Two</a></li>
+            <li><a href="books/lighthouse-witch-and-the-sea-wolf.html" class="link">Book Three</a></li>
+            <li><a href="books/librarian-witch-and-the-shadow-wolf.html" class="link">Book Four</a></li>
+            <li><a href="books/bakery-witch-and-the-iron-wolf.html" class="link">Book Five</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--gold-soft)]">
+            Publisher
+          </h3>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a href="../catalog.html" class="link">Catalog</a></li>
+            <li><a href="../about.html" class="link">About</a></li>
+            <li><a href="../contact.html" class="link">Contact</a></li>
+            <li><a href="../index.html" class="link">Clear Ledger Publishing Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
