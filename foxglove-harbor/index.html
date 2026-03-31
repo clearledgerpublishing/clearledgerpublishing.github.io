@@ -6,7 +6,7 @@
   <title>Foxglove Harbor Witches | Paranormal Romance Series</title>
   <meta
     name="description"
-    content="Discover Foxglove Harbor Witches, a paranormal romance series filled with witches, wolves, coastal magic, dangerous secrets, and interconnected love stories."
+    content="Discover Foxglove Harbor Witches, a moody paranormal romance series filled with witches, wolves, coastal magic, dangerous secrets, and interconnected love stories."
   />
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,55 +20,50 @@
   <style>
     :root {
       --bg: #0b0910;
-      --bg2: #15101c;
-      --panel: rgba(28, 20, 38, 0.82);
-      --panel-soft: rgba(255, 255, 255, 0.04);
+      --bg-soft: #130f18;
+      --panel: rgba(22, 17, 29, 0.86);
+      --panel-soft: rgba(255, 255, 255, 0.045);
       --line: rgba(231, 201, 156, 0.16);
       --text: #f5efe7;
-      --muted: #cbbfb1;
+      --muted: #cdbfae;
       --gold: #e0c18f;
-      --gold-soft: #f3dfbf;
-      --plum: #5d3d67;
-      --shadow: 0 18px 40px rgba(0, 0, 0, 0.34);
+      --gold-soft: #f2dfbe;
+      --shadow: 0 20px 45px rgba(0, 0, 0, 0.34);
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: "Inter", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top, rgba(113, 71, 129, 0.18), transparent 28%),
+        radial-gradient(circle at top, rgba(109, 72, 128, 0.18), transparent 30%),
         linear-gradient(180deg, #120d17 0%, #0b0910 100%);
     }
 
-    h1, h2, h3, .display-font {
+    h1, h2, h3, h4, .display-font {
       font-family: "Cormorant Garamond", serif;
     }
 
     .hero {
       position: relative;
-      overflow: hidden;
       isolation: isolate;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
+      overflow: hidden;
       background:
-        linear-gradient(180deg, rgba(10, 7, 14, 0.35) 0%, rgba(10, 7, 14, 0.72) 58%, rgba(10, 7, 14, 0.92) 100%),
-        radial-gradient(circle at 18% 18%, rgba(187, 140, 207, 0.12), transparent 22%),
-        radial-gradient(circle at 80% 16%, rgba(117, 155, 195, 0.10), transparent 20%);
-      z-index: -2;
+        linear-gradient(180deg, rgba(10, 7, 14, 0.35) 0%, rgba(10, 7, 14, 0.68) 55%, rgba(10, 7, 14, 0.9) 100%),
+        radial-gradient(circle at 18% 18%, rgba(191, 140, 207, 0.10), transparent 24%),
+        radial-gradient(circle at 80% 16%, rgba(117, 155, 195, 0.09), transparent 22%);
     }
 
     .hero::after {
       content: "";
       position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 100%);
+      inset: auto 0 0 0;
+      height: 180px;
+      background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(240, 236, 244, 0.035) 35%, rgba(240,236,244,0) 100%);
+      pointer-events: none;
       z-index: -1;
     }
 
@@ -80,7 +75,7 @@
     }
 
     .panel {
-      background: rgba(20, 15, 28, 0.92);
+      background: rgba(18, 14, 24, 0.94);
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
     }
@@ -101,7 +96,7 @@
       padding: 0.95rem 1.35rem;
       font-weight: 700;
       background: linear-gradient(135deg, #e0c18f 0%, #b98757 100%);
-      color: #1a120e;
+      color: #1b130f;
       transition: transform 0.18s ease, opacity 0.18s ease;
     }
 
@@ -128,6 +123,46 @@
       border-color: rgba(224, 193, 143, 0.32);
     }
 
+    .tag {
+      border-radius: 9999px;
+      padding: 0.75rem 1rem;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(224, 193, 143, 0.14);
+      color: var(--gold-soft);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .hero-image-shell {
+      position: relative;
+      border-radius: 2rem;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.045) 0%, rgba(255,255,255,0.02) 100%),
+        rgba(255,255,255,0.03);
+      box-shadow: var(--shadow);
+      min-height: 460px;
+    }
+
+    .hero-image-shell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-fallback {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 2rem;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0.65) 100%),
+        linear-gradient(145deg, rgba(94, 58, 108, 0.9) 0%, rgba(22, 17, 29, 1) 100%);
+    }
+
     .mini-card {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.08);
@@ -138,7 +173,7 @@
       position: relative;
       overflow: hidden;
       border-radius: 1.5rem;
-      background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.02) 100%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.045) 0%, rgba(255,255,255,0.02) 100%);
       border: 1px solid rgba(255,255,255,0.08);
       box-shadow: var(--shadow);
       transition: transform 0.2s ease, border-color 0.2s ease;
@@ -149,7 +184,7 @@
       border-color: rgba(224, 193, 143, 0.28);
     }
 
-    .cover {
+    .cover-frame {
       position: relative;
       aspect-ratio: 2 / 3;
       border-radius: 1rem;
@@ -157,49 +192,78 @@
       border: 1px solid rgba(255,255,255,0.08);
       background:
         linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.015) 100%),
-        linear-gradient(145deg, rgba(95,61,103,0.85) 0%, rgba(26,20,35,0.95) 100%);
+        linear-gradient(145deg, rgba(95,61,103,0.9) 0%, rgba(26,20,35,0.98) 100%);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+    }
+
+    .cover-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cover-fallback {
+      position: absolute;
+      inset: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.28);
-    }
-
-    .cover::before {
-      content: "";
-      position: absolute;
-      inset: 0;
+      padding: 1.5rem;
       background:
         radial-gradient(circle at 30% 20%, rgba(255,255,255,0.08), transparent 24%),
         radial-gradient(circle at 70% 80%, rgba(224,193,143,0.08), transparent 26%);
-      pointer-events: none;
-    }
-
-    .cover-label {
-      position: relative;
-      z-index: 1;
-      max-width: 80%;
-    }
-
-    .cover-label span {
-      display: block;
     }
 
     .cover-book {
+      display: block;
       font-size: 0.72rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--gold-soft);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.45rem;
       font-weight: 700;
     }
 
     .cover-title {
+      display: block;
       font-family: "Cormorant Garamond", serif;
       font-size: 1.6rem;
       line-height: 1.02;
       font-weight: 700;
       color: white;
+    }
+
+    .series-strip {
+      border-radius: 2rem;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.54) 100%),
+        linear-gradient(145deg, rgba(84, 57, 101, 0.9), rgba(18, 14, 24, 0.98));
+      min-height: 280px;
+      position: relative;
+    }
+
+    .series-strip img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .series-strip-copy {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+      display: flex;
+      align-items: end;
+      min-height: 280px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.66) 100%);
     }
 
     .link {
@@ -219,9 +283,13 @@
     .cta-band {
       background:
         linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.015) 100%),
-        rgba(20, 15, 28, 0.94);
+        rgba(18, 14, 24, 0.94);
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
+    }
+
+    .hidden-broken {
+      display: none !important;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -256,8 +324,8 @@
 
   <main id="main-content">
     <section class="hero">
-      <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
-        <div class="max-w-4xl">
+      <div class="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:py-24">
+        <div class="flex flex-col justify-center">
           <p class="kicker mb-5">A Foxglove Harbor Witches Series</p>
 
           <h1 class="text-5xl font-semibold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
@@ -273,28 +341,31 @@
             <a href="#series-books" class="btn-primary">Browse the Series</a>
             <a href="reading-order.html" class="btn-secondary">Reading Order</a>
           </div>
+
+          <div class="mt-10 flex flex-wrap gap-3">
+            <span class="tag">Protective wolf heroes</span>
+            <span class="tag">Small-town witch magic</span>
+            <span class="tag">Interconnected romances</span>
+            <span class="tag">Fog, longing, and danger</span>
+          </div>
         </div>
 
-        <div class="mt-12 grid gap-4 md:grid-cols-3">
-          <div class="mini-card p-5">
-            <p class="kicker mb-2">Core Promise</p>
-            <p class="text-sm leading-7 text-[var(--muted)]">
-              Atmospheric romance with emotional tension, dangerous men, and women whose magic changes the town.
-            </p>
-          </div>
-
-          <div class="mini-card p-5">
-            <p class="kicker mb-2">For Readers Who Love</p>
-            <p class="text-sm leading-7 text-[var(--muted)]">
-              Small-town magic, protective wolf heroes, layered heroines, and interconnected series arcs.
-            </p>
-          </div>
-
-          <div class="mini-card p-5">
-            <p class="kicker mb-2">Start Here</p>
-            <p class="text-sm leading-7 text-[var(--muted)]">
-              Begin with Book One, then follow the harbor deeper as each romance opens the world wider.
-            </p>
+        <div class="hero-image-shell">
+          <img
+            id="hero-image"
+            src="images/featured-cover.jpg"
+            alt="Foxglove Harbor Witches featured series artwork"
+          />
+          <div class="hero-fallback" id="hero-fallback">
+            <div>
+              <p class="kicker mb-3">Series Mood</p>
+              <h2 class="text-4xl font-semibold text-white sm:text-5xl">
+                Romantic. Haunted. Cinematic.
+              </h2>
+              <p class="mt-4 max-w-xl text-base leading-7 text-white/85 sm:text-lg">
+                Your featured series image should make the world feel premium before a reader even scrolls.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -302,20 +373,46 @@
 
     <section class="mx-auto max-w-7xl px-6 py-14 lg:px-8">
       <div class="panel rounded-[2rem] p-8 md:p-10">
-        <div class="max-w-3xl">
-          <p class="kicker mb-4">Enter Foxglove Harbor</p>
-          <h2 class="text-4xl font-semibold text-white sm:text-5xl">
-            A connected paranormal romance world built for binge readers.
-          </h2>
-          <p class="mt-5 text-lg leading-8 text-[var(--muted)]">
-            Standalone central couples, recurring town lore, and a dark coastal atmosphere designed to pull
-            readers from one book to the next.
-          </p>
+        <div class="grid gap-6 lg:grid-cols-[1fr_0.88fr] lg:items-center">
+          <div>
+            <p class="kicker mb-4">Enter Foxglove Harbor</p>
+            <h2 class="text-4xl font-semibold text-white sm:text-5xl">
+              A connected paranormal romance world built for binge readers.
+            </h2>
+            <p class="mt-5 max-w-3xl text-lg leading-8 text-[var(--muted)]">
+              Standalone central couples, recurring town lore, and a dark coastal atmosphere designed to pull
+              readers from one book to the next. This page should sell the series fast and move readers straight
+              into the books.
+            </p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+            <div class="mini-card p-5">
+              <p class="kicker mb-2">Core Promise</p>
+              <p class="text-sm leading-7 text-[var(--muted)]">
+                Atmospheric romance with emotional tension and dangerous men.
+              </p>
+            </div>
+
+            <div class="mini-card p-5">
+              <p class="kicker mb-2">For Readers Who Love</p>
+              <p class="text-sm leading-7 text-[var(--muted)]">
+                Alpha tenderness, layered heroines, and bingeable series progression.
+              </p>
+            </div>
+
+            <div class="mini-card p-5">
+              <p class="kicker mb-2">Best Starting Point</p>
+              <p class="text-sm leading-7 text-[var(--muted)]">
+                Begin with Book One, then follow the harbor deeper.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="series-books" class="mx-auto max-w-7xl px-6 py-4 lg:px-8 lg:py-8">
+    <section id="series-books" class="mx-auto max-w-7xl px-6 py-4 lg:px-8 lg:py-6">
       <div class="mb-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div class="max-w-3xl">
           <p class="kicker mb-4">The Books</p>
@@ -323,7 +420,8 @@
             Start with the first spark. Stay for the whole harbor.
           </h2>
           <p class="mt-5 text-lg leading-8 text-[var(--muted)]">
-            Book One is the clearest entry point. The rest deepen the world, the danger, and the romance.
+            Book One gets the most space because that is the conversion point. The rest should signal depth,
+            continuity, and cover consistency.
           </p>
         </div>
 
@@ -332,13 +430,19 @@
         </a>
       </div>
 
-      <div class="grid gap-8 xl:grid-cols-[1.2fr_1fr]">
+      <div class="grid gap-8 xl:grid-cols-[1.18fr_1fr]">
         <article class="book-card p-6 md:p-8">
-          <div class="grid gap-6 sm:grid-cols-[220px_1fr] sm:items-start">
-            <div class="cover">
-              <div class="cover-label">
-                <span class="cover-book">Book One</span>
-                <span class="cover-title">The Bookshop Witch and the Wolf Sheriff</span>
+          <div class="grid gap-6 sm:grid-cols-[240px_1fr] sm:items-start">
+            <div class="cover-frame">
+              <img
+                data-candidates='["images/book-1-cover.jpg","images/foxglove-book1.jpg","images/book1-cover.jpg","images/book1.jpg"]'
+                alt="Cover of The Bookshop Witch and the Wolf Sheriff"
+              />
+              <div class="cover-fallback">
+                <div>
+                  <span class="cover-book">Book One</span>
+                  <span class="cover-title">The Bookshop Witch and the Wolf Sheriff</span>
+                </div>
               </div>
             </div>
 
@@ -365,10 +469,16 @@
 
         <div class="grid gap-6 sm:grid-cols-2">
           <article class="book-card p-5">
-            <div class="cover mb-4">
-              <div class="cover-label">
-                <span class="cover-book">Book Two</span>
-                <span class="cover-title">The Apothecary Witch and the Wolf Detective</span>
+            <div class="cover-frame mb-4">
+              <img
+                data-candidates='["images/book-2-cover.jpg","images/foxglove-book2.jpg","images/book2-cover.jpg","images/book2.jpg"]'
+                alt="Cover of The Apothecary Witch and the Wolf Detective"
+              />
+              <div class="cover-fallback">
+                <div>
+                  <span class="cover-book">Book Two</span>
+                  <span class="cover-title">The Apothecary Witch and the Wolf Detective</span>
+                </div>
               </div>
             </div>
             <p class="text-sm leading-7 text-[var(--muted)]">
@@ -380,10 +490,16 @@
           </article>
 
           <article class="book-card p-5">
-            <div class="cover mb-4">
-              <div class="cover-label">
-                <span class="cover-book">Book Three</span>
-                <span class="cover-title">The Lighthouse Witch and the Sea Wolf</span>
+            <div class="cover-frame mb-4">
+              <img
+                data-candidates='["images/book-3-cover.jpg","images/foxglove-book3.jpg","images/book3-cover.jpg","images/book3.jpg"]'
+                alt="Cover of The Lighthouse Witch and the Sea Wolf"
+              />
+              <div class="cover-fallback">
+                <div>
+                  <span class="cover-book">Book Three</span>
+                  <span class="cover-title">The Lighthouse Witch and the Sea Wolf</span>
+                </div>
               </div>
             </div>
             <p class="text-sm leading-7 text-[var(--muted)]">
@@ -395,10 +511,16 @@
           </article>
 
           <article class="book-card p-5">
-            <div class="cover mb-4">
-              <div class="cover-label">
-                <span class="cover-book">Book Four</span>
-                <span class="cover-title">The Librarian Witch and the Shadow Wolf</span>
+            <div class="cover-frame mb-4">
+              <img
+                data-candidates='["images/book-4-cover.jpg","images/foxglove-book4.jpg","images/book4-cover.jpg","images/book4.jpg"]'
+                alt="Cover of The Librarian Witch and the Shadow Wolf"
+              />
+              <div class="cover-fallback">
+                <div>
+                  <span class="cover-book">Book Four</span>
+                  <span class="cover-title">The Librarian Witch and the Shadow Wolf</span>
+                </div>
               </div>
             </div>
             <p class="text-sm leading-7 text-[var(--muted)]">
@@ -410,10 +532,16 @@
           </article>
 
           <article class="book-card p-5">
-            <div class="cover mb-4">
-              <div class="cover-label">
-                <span class="cover-book">Book Five</span>
-                <span class="cover-title">The Bakery Witch and the Iron Wolf</span>
+            <div class="cover-frame mb-4">
+              <img
+                data-candidates='["images/book-5-cover.jpg","images/foxglove-book5.jpg","images/book5-cover.jpg","images/book5.jpg"]'
+                alt="Cover of The Bakery Witch and the Iron Wolf"
+              />
+              <div class="cover-fallback">
+                <div>
+                  <span class="cover-book">Book Five</span>
+                  <span class="cover-title">The Bakery Witch and the Iron Wolf</span>
+                </div>
               </div>
             </div>
             <p class="text-sm leading-7 text-[var(--muted)]">
@@ -427,7 +555,28 @@
       </div>
     </section>
 
-    <section class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+    <section class="mx-auto max-w-7xl px-6 py-14 lg:px-8">
+      <div class="series-strip">
+        <img
+          id="series-strip-image"
+          src="images/featured-cover.jpg"
+          alt="Foxglove Harbor series atmosphere artwork"
+        />
+        <div class="series-strip-copy">
+          <div class="max-w-2xl">
+            <p class="kicker mb-3">Series Atmosphere</p>
+            <h2 class="text-3xl font-semibold text-white sm:text-4xl">
+              Moody coastal magic with commercial genre packaging.
+            </h2>
+            <p class="mt-4 text-base leading-7 text-white/85 sm:text-lg">
+              This section gives the page a visual breathing point and makes the series feel larger than a plain list of titles.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-10 lg:px-8 lg:py-14">
       <div class="cta-band rounded-[2rem] p-8 md:p-10">
         <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
@@ -496,5 +645,56 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    function attachFallbackImage(imgEl, candidates) {
+      const fallback = imgEl.parentElement.querySelector(".cover-fallback") || document.getElementById("hero-fallback");
+      let idx = 0;
+
+      function tryNext() {
+        if (idx >= candidates.length) {
+          imgEl.classList.add("hidden-broken");
+          if (fallback) fallback.style.display = "flex";
+          return;
+        }
+        imgEl.src = candidates[idx];
+        idx += 1;
+      }
+
+      imgEl.addEventListener("load", () => {
+        imgEl.classList.remove("hidden-broken");
+        if (fallback) fallback.style.display = "none";
+      });
+
+      imgEl.addEventListener("error", tryNext);
+
+      tryNext();
+    }
+
+    const heroImage = document.getElementById("hero-image");
+    attachFallbackImage(heroImage, [
+      "images/featured-cover.jpg",
+      "images/featured-series.jpg",
+      "images/series-featured-collage.jpg",
+      "images/hero-harbor-bg.jpg"
+    ]);
+
+    const stripImage = document.getElementById("series-strip-image");
+    attachFallbackImage(stripImage, [
+      "images/featured-cover.jpg",
+      "images/featured-series.jpg",
+      "images/series-featured-collage.jpg",
+      "images/harbor-divider-banner.jpg"
+    ]);
+
+    document.querySelectorAll("img[data-candidates]").forEach((img) => {
+      try {
+        const candidates = JSON.parse(img.getAttribute("data-candidates"));
+        attachFallbackImage(img, candidates);
+      } catch (e) {
+        img.classList.add("hidden-broken");
+      }
+    });
+  </script>
 </body>
 </html>
