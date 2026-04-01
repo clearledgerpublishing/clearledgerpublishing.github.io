@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Mercer | Clear Ledger Publishing</title>
+  <meta
+    name="description"
+    content="Alex Mercer writes practical books on AI, automation, personal AI agents, and modern technology adoption for professionals and small businesses."
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --ink: #1f2937;
+      --soft-ink: #4b5563;
+      --muted: #6b7280;
+      --paper: #f7f8f6;
+      --white: #ffffff;
+      --line: #d9e1dc;
+      --steel: #61778c;
+      --steel-dark: #44586a;
+      --mist: #eef3f7;
+      --sand: #efe7dd;
+      --shadow: 0 18px 40px rgba(31, 41, 55, 0.08);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #fafcfd 0%, #f2f5f7 100%);
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .container-width {
+      max-width: 1200px;
+    }
+
+    .card-shadow {
+      box-shadow: var(--shadow);
+    }
+
+    .ring-soft {
+      border: 1px solid rgba(97, 119, 140, 0.18);
+    }
+
+    .hero-grid {
+      background:
+        radial-gradient(circle at top left, rgba(97, 119, 140, 0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(239, 231, 221, 0.5), transparent 28%),
+        linear-gradient(135deg, #fbfcfd 0%, #eef3f7 100%);
+    }
+
+    .section-fade {
+      background: linear-gradient(180deg, rgba(255,255,255,0.75) 0%, rgba(247,248,246,1) 100%);
+    }
+
+    .btn-primary {
+      background: var(--steel-dark);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #354857;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--steel-dark);
+      border: 1px solid rgba(68, 88, 106, 0.22);
+    }
+
+    .btn-secondary:hover {
+      background: #fafcfd;
+    }
+
+    .accent-panel {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06)),
+        linear-gradient(135deg, #6e879d 0%, #475a6b 100%);
+      color: white;
+    }
+
+    .cover-card {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04)),
+        linear-gradient(135deg, #56718a 0%, #314353 100%);
+      min-height: 300px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover-card.alt-1 {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04)),
+        linear-gradient(135deg, #1f2730 0%, #0d1319 100%);
+    }
+
+    .cover-card.alt-2 {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04)),
+        linear-gradient(135deg, #415b75 0%, #24384b 100%);
+    }
+
+    .cover-card.alt-3 {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04)),
+        linear-gradient(135deg, #6a5d48 0%, #43392d 100%);
+    }
+
+    .cover-meta {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      right: 1rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .cover-title {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      top: 24%;
+      color: white;
+      text-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    }
+
+    .cover-author {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.94);
+    }
+  </style>
+</head>
+<body>
+  <header class="border-b border-slate-200/80 bg-white/90 backdrop-blur">
+    <div class="container-width mx-auto px-6">
+      <div class="flex flex-col gap-5 py-5 md:flex-row md:items-center md:justify-between">
+        <a href="../index.html" class="text-xl font-semibold tracking-tight text-slate-900">
+          Clear Ledger Publishing
+        </a>
+        <nav aria-label="Main navigation" class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700">
+          <a href="../index.html" class="hover:text-slate-900">Home</a>
+          <a href="../catalog.html" class="hover:text-slate-900">Catalog</a>
+          <a href="../authors.html" class="text-slate-900">Authors</a>
+          <a href="../series/caring-for-aging-parents.html" class="hover:text-slate-900">Series</a>
+          <a href="../about.html" class="hover:text-slate-900">About</a>
+          <a href="../contact.html" class="hover:text-slate-900">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-grid border-b border-slate-200/70">
+      <div class="container-width mx-auto grid gap-12 px-6 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:py-24">
+        <div>
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">
+            Author Profile
+          </p>
+          <h1 class="max-w-3xl text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">
+            Alex Mercer
+          </h1>
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">
+            Practical technology and AI books for professionals, builders, and small business operators navigating modern automation.
+          </p>
+          <p class="mt-5 max-w-3xl text-base leading-8 text-slate-600">
+            Alex Mercer is the pen name of a technologist with a graduate degree and 14 years in the technology sector. His work focuses on AI, automation, personal AI agents, workflows, and the practical application of emerging technology for real-world readers. The core idea behind the brand is simple: generative AI will reshape modern industry, and independent professionals and small-to-mid-size businesses need usable guidance now, not theory later.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#books" class="btn-primary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">
+              Browse Books
+            </a>
+            <a href="../catalog.html" class="btn-secondary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">
+              View Catalog
+            </a>
+          </div>
+        </div>
+
+        <aside class="rounded-[2rem] bg-white p-8 card-shadow ring-soft">
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">At a Glance</p>
+          <div class="mt-6 space-y-5">
+            <div>
+              <p class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Focus</p>
+              <p class="mt-2 text-base leading-7 text-slate-700">
+                AI, automation, personal AI agents, applied technology, practical business adoption
+              </p>
+            </div>
+            <div>
+              <p class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Audience</p>
+              <p class="mt-2 text-base leading-7 text-slate-700">
+                Professionals, founders, operators, and small business owners who want practical AI leverage
+              </p>
+            </div>
+            <div>
+              <p class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Core Promise</p>
+              <p class="mt-2 text-base leading-7 text-slate-700">
+                Clear, usable guidance for people who want AI systems to do real work without surrendering control
+              </p>
+            </div>
+            <div>
+              <p class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Business Lens</p>
+              <p class="mt-2 text-base leading-7 text-slate-700">
+                Especially focused on helping smaller firms compete more effectively through technology adoption
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-fade">
+      <div class="container-width mx-auto px-6 py-16 lg:py-20">
+        <div class="grid gap-8 lg:grid-cols-3">
+          <div class="rounded-[1.75rem] bg-white p-8 card-shadow ring-soft">
+            <h2 class="text-2xl font-semibold text-slate-900">What Alex Mercer writes</h2>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Short, practical books about AI tools, workflows, agent systems, automation patterns, and specialized business use cases.
+            </p>
+          </div>
+          <div class="rounded-[1.75rem] bg-white p-8 card-shadow ring-soft">
+            <h2 class="text-2xl font-semibold text-slate-900">What makes the books useful</h2>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              They are built for implementation-minded readers who want specific concepts, real workflows, and better mental models rather than vague futurism.
+            </p>
+          </div>
+          <div class="rounded-[1.75rem] bg-white p-8 card-shadow ring-soft">
+            <h2 class="text-2xl font-semibold text-slate-900">Why readers stay</h2>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              The catalog clusters around a strong practical lane: applied AI for real work, real systems, and real business leverage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="books" class="border-y border-slate-200/70 bg-[var(--mist)]/70">
+      <div class="container-width mx-auto px-6 py-16 lg:py-20">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">Selected Titles</p>
+          <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">
+            Books by Alex Mercer
+          </h2>
+          <p class="mt-5 text-base leading-8 text-slate-600">
+            The current visible catalog centers on AI agents, workflows, applied automation, and practical technology use for professionals and business operators.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="cover-card rounded-[1.75rem] card-shadow">
+            <p class="cover-meta">AI / Automation</p>
+            <div class="cover-title">
+              <p class="serif text-2xl font-bold leading-tight">OpenClaw Cookbook</p>
+              <p class="mt-4 text-sm font-medium uppercase tracking-[0.16em] text-white/85">
+                Patterns for self-hosted AI agent automation and research workflows
+              </p>
+            </div>
+            <p class="cover-author">Alex Mercer</p>
+          </article>
+
+          <article class="cover-card alt-1 rounded-[1.75rem] card-shadow">
+            <p class="cover-meta">AI / Security</p>
+            <div class="cover-title">
+              <p class="serif text-2xl font-bold leading-tight">Secure Personal AI Agents</p>
+              <p class="mt-4 text-sm font-medium uppercase tracking-[0.16em] text-white/85">
+                Self-hosted agent architecture, prompt-injection defense, and governed automation
+              </p>
+            </div>
+            <p class="cover-author">Alex Mercer</p>
+          </article>
+
+          <article class="cover-card alt-2 rounded-[1.75rem] card-shadow">
+            <p class="cover-meta">AI / Introductory</p>
+            <div class="cover-title">
+              <p class="serif text-2xl font-bold leading-tight">OpenClaw for Beginners</p>
+              <p class="mt-4 text-sm font-medium uppercase tracking-[0.16em] text-white/85">
+                Personal AI agents explained for practical users
+              </p>
+            </div>
+            <p class="cover-author">Alex Mercer</p>
+          </article>
+
+          <article class="cover-card alt-3 rounded-[1.75rem] card-shadow">
+            <p class="cover-meta">Practical AI</p>
+            <div class="cover-title">
+              <p class="serif text-2xl font-bold leading-tight">Personal AI Agents for Real Work</p>
+              <p class="mt-4 text-sm font-medium uppercase tracking-[0.16em] text-white/85">
+                Using agent systems for actual productivity and business utility
+              </p>
+            </div>
+            <p class="cover-author">Alex Mercer</p>
+          </article>
+
+          <article class="cover-card rounded-[1.75rem] card-shadow">
+            <p class="cover-meta">Applied Workflows</p>
+            <div class="cover-title">
+              <p class="serif text-2xl font-bold leading-tight">AI Agent Workflows</p>
+              <p class="mt-4 text-sm font-medium uppercase tracking-[0.16em] text-white/85">
+                Automation for research, writing, scheduling, and real-world output
+              </p>
+            </div>
+            <p class="cover-author">Alex Mercer</p>
+          </article>
+
+          <article class="cover-card alt-2 rounded-[1.75rem] card-shadow">
+            <p class="cover-meta">AI / Explanation</p>
+            <div class="cover-title">
+              <p class="serif text-2xl font-bold leading-tight">Moltbot Personal AI Explained</p>
+              <p class="mt-4 text-sm font-medium uppercase tracking-[0.16em] text-white/85">
+                How personal AI tools work and how to use them wisely
+              </p>
+            </div>
+            <p class="cover-author">Alex Mercer</p>
+          </article>
+
+          <article class="cover-card alt-1 rounded-[1.75rem] card-shadow xl:col-span-2">
+            <p class="cover-meta">Specialized Professional Use</p>
+            <div class="cover-title">
+              <p class="serif text-2xl font-bold leading-tight">AI for Litigators</p>
+              <p class="mt-4 text-sm font-medium uppercase tracking-[0.16em] text-white/85">
+                Practical rules for AI use in litigation settings without losing professional control
+              </p>
+            </div>
+            <p class="cover-author">Alex Mercer</p>
+          </article>
+
+          <article class="cover-card alt-3 rounded-[1.75rem] card-shadow">
+            <p class="cover-meta">Industry Application</p>
+            <div class="cover-title">
+              <p class="serif text-2xl font-bold leading-tight">AI Front Desk for Dental Practices</p>
+              <p class="mt-4 text-sm font-medium uppercase tracking-[0.16em] text-white/85">
+                Capturing missed calls, booking more patients, and automating front-desk workflows
+              </p>
+            </div>
+            <p class="cover-author">Alex Mercer</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container-width mx-auto px-6 py-16 lg:py-20">
+        <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">Author Bio</p>
+            <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">
+              Practical AI publishing for professionals and independent firms
+            </h2>
+            <p class="mt-6 text-base leading-8 text-slate-600">
+              Alex Mercer is the pen name of a technologist with a graduate degree and 14 years in the technology sector. His career has focused largely on integrating new technology into small and mid-size businesses in the service economy.
+            </p>
+            <p class="mt-5 text-base leading-8 text-slate-600">
+              The publishing vision behind the brand is that generative artificial intelligence and increased computing power will materially change modern industry, and that smaller independent firms can use those tools to compete more effectively against much larger, private-equity-backed operators.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="../catalog.html" class="btn-primary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">
+                Browse the Catalog
+              </a>
+              <a href="../authors.html" class="btn-secondary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">
+                Back to Authors
+              </a>
+            </div>
+          </div>
+
+          <aside class="accent-panel rounded-[2rem] p-8 card-shadow">
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-white/75">Best Reader Entry</p>
+            <p class="mt-5 text-base leading-8 text-white/90">
+              Start with the title that matches your immediate use case: personal agents, secure agents, professional workflows, legal AI, or industry-specific business automation.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-[#f7f8f6]">
+    <div class="container-width mx-auto px-6 py-10">
+      <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="text-lg font-semibold text-slate-900">Clear Ledger Publishing</p>
+          <p class="mt-2 max-w-xl text-sm leading-7 text-slate-600">
+            Independent fiction and nonfiction designed with clear positioning, strong reader pathways, and long-term series value.
+          </p>
+        </div>
+        <nav aria-label="Footer navigation" class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700">
+          <a href="../catalog.html" class="hover:text-slate-900">Catalog</a>
+          <a href="../authors.html" class="hover:text-slate-900">Authors</a>
+          <a href="../about.html" class="hover:text-slate-900">About</a>
+          <a href="../contact.html" class="hover:text-slate-900">Contact</a>
+        </nav>
+      </div>
+      <p class="mt-8 text-sm text-slate-500">© 2026 Clear Ledger Publishing. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
