@@ -1,1 +1,297 @@
-temp
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claire Whitaker | Clear Ledger Publishing</title>
+  <meta
+    name="description"
+    content="Claire Whitaker writes practical, compassionate guides for adult children caring for aging parents. Explore the Caring For Aging Parents series from Clear Ledger Publishing."
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1f2937;
+      --soft-ink: #4b5563;
+      --muted: #6b7280;
+      --paper: #f7f8f6;
+      --white: #ffffff;
+      --line: #d9e1dc;
+      --sage: #7a9b8c;
+      --sage-dark: #567366;
+      --mist: #e8efeb;
+      --sand: #efe7dd;
+      --shadow: 0 18px 40px rgba(31, 41, 55, 0.08);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f8faf8 0%, #f3f5f3 100%);
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .container-width {
+      max-width: 1200px;
+    }
+
+    .card-shadow {
+      box-shadow: var(--shadow);
+    }
+
+    .ring-soft {
+      border: 1px solid rgba(122, 155, 140, 0.18);
+    }
+
+    .hero-grid {
+      background:
+        radial-gradient(circle at top left, rgba(122, 155, 140, 0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(239, 231, 221, 0.65), transparent 30%),
+        linear-gradient(135deg, #fbfcfb 0%, #eef2ef 100%);
+    }
+
+    .section-fade {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(247, 248, 246, 1) 100%);
+    }
+
+    .btn-primary {
+      background: var(--sage-dark);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #486156;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--sage-dark);
+      border: 1px solid rgba(86, 115, 102, 0.22);
+    }
+
+    .btn-secondary:hover {
+      background: #f8fbf9;
+    }
+  </style>
+</head>
+<body>
+  <header class="border-b border-slate-200/80 bg-white/90 backdrop-blur">
+    <div class="container-width mx-auto px-6">
+      <div class="flex flex-col gap-5 py-5 md:flex-row md:items-center md:justify-between">
+        <a href="../index.html" class="text-xl font-semibold tracking-tight text-slate-900">Clear Ledger Publishing</a>
+        <nav aria-label="Main navigation" class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700">
+          <a href="../index.html" class="hover:text-slate-900">Home</a>
+          <a href="../catalog.html" class="hover:text-slate-900">Catalog</a>
+          <a href="../authors.html" class="text-slate-900">Authors</a>
+          <a href="../series/caring-for-aging-parents.html" class="hover:text-slate-900">Series</a>
+          <a href="../about.html" class="hover:text-slate-900">About</a>
+          <a href="../contact.html" class="hover:text-slate-900">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-grid border-b border-slate-200/70">
+      <div class="container-width mx-auto grid gap-12 px-6 py-16 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:py-24">
+        <div>
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">Author Profile</p>
+          <h1 class="max-w-3xl text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">Claire Whitaker</h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-700 md:text-xl">
+            Practical, compassionate nonfiction for adult children navigating the real decisions of aging-parent care.
+          </p>
+          <p class="mt-5 max-w-2xl text-base leading-8 text-slate-600">
+            Claire Whitaker writes calm, actionable guides for families facing difficult elder-care choices: when a parent can no longer live alone, how to manage care from a distance, how to handle household transitions, and how to keep going when caregiving becomes exhausting.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="../series/caring-for-aging-parents.html" class="btn-primary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">Explore the Series</a>
+            <a href="#books" class="btn-secondary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">Browse Titles</a>
+          </div>
+        </div>
+
+        <aside class="rounded-[2rem] bg-white p-8 card-shadow ring-soft">
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">At a Glance</p>
+          <div class="mt-6 space-y-5">
+            <div>
+              <p class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Focus</p>
+              <p class="mt-2 text-base leading-7 text-slate-700">Caregiving, elder-care transitions, family decision-making, and support for adult children.</p>
+            </div>
+            <div>
+              <p class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Tone</p>
+              <p class="mt-2 text-base leading-7 text-slate-700">Clear, practical, steady, and humane.</p>
+            </div>
+            <div>
+              <p class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Featured Series</p>
+              <p class="mt-2 text-base leading-7 text-slate-700">Caring For Aging Parents</p>
+            </div>
+            <div>
+              <p class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Best For Readers Who Need</p>
+              <p class="mt-2 text-base leading-7 text-slate-700">Straight answers, emotional steadiness, and practical next steps during stressful family transitions.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-fade">
+      <div class="container-width mx-auto px-6 py-16 lg:py-20">
+        <div class="grid gap-8 lg:grid-cols-3">
+          <div class="rounded-[1.75rem] bg-white p-8 card-shadow ring-soft">
+            <h2 class="text-2xl font-semibold text-slate-900">What Claire Whitaker writes</h2>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Her books are built for readers who need clarity under pressure. The focus is not abstract theory. It is the lived reality of family caregiving, decision fatigue, and the next concrete step.
+            </p>
+          </div>
+          <div class="rounded-[1.75rem] bg-white p-8 card-shadow ring-soft">
+            <h2 class="text-2xl font-semibold text-slate-900">Who these books help</h2>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Adult children confronting safety, distance, burnout, housing changes, and the emotional strain of trying to do the right thing for a parent while holding together the rest of life.
+            </p>
+          </div>
+          <div class="rounded-[1.75rem] bg-white p-8 card-shadow ring-soft">
+            <h2 class="text-2xl font-semibold text-slate-900">Why readers stay</h2>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              The guidance is grounded, organized, and emotionally realistic. These books aim to reduce panic, sharpen judgment, and make hard situations feel more manageable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="series" class="border-y border-slate-200/70 bg-[var(--mist)]/60">
+      <div class="container-width mx-auto px-6 py-16 lg:py-20">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">Featured Series</p>
+          <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">Caring For Aging Parents</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-700">
+            A practical nonfiction series for adult children facing elder-care decisions with real emotional, financial, and logistical consequences.
+          </p>
+          <p class="mt-4 text-base leading-8 text-slate-600">
+            Designed as a reader-friendly guidance shelf, the series addresses common pressure points in aging-parent care and helps families move from uncertainty toward a clearer plan.
+          </p>
+          <div class="mt-8">
+            <a href="../series/caring-for-aging-parents.html" class="btn-primary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">View Series Page</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="books" class="bg-white">
+      <div class="container-width mx-auto px-6 py-16 lg:py-20">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">Selected Titles</p>
+          <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">Books by Claire Whitaker</h2>
+          <p class="mt-5 text-base leading-8 text-slate-600">
+            Start with the book that best matches the decision in front of you, or begin with Book 1 for the broadest entry into the series.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-2">
+          <article class="rounded-[1.75rem] border border-slate-200 bg-[var(--paper)] p-8">
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Book 1</p>
+            <h3 class="mt-3 text-2xl font-semibold text-slate-900">When Your Parent Can’t Live Alone Anymore</h3>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              A practical starting point for families confronting the first major transition in aging-parent care: when safety, independence, and day-to-day reality no longer align.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="../books/when-your-parent-cant-live-alone-anymore.html" class="btn-secondary inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold transition">View Book Page</a>
+            </div>
+          </article>
+
+          <article class="rounded-[1.75rem] border border-slate-200 bg-[var(--paper)] p-8">
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Book 3</p>
+            <h3 class="mt-3 text-2xl font-semibold text-slate-900">When You Can’t Be There</h3>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Guidance for long-distance caregiving, built for adult children trying to manage decisions, logistics, and emotional strain when they cannot be physically present every day.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="../books/when-you-cant-be-there.html" class="btn-secondary inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold transition">View Book Page</a>
+            </div>
+          </article>
+
+          <article class="rounded-[1.75rem] border border-slate-200 bg-[var(--paper)] p-8">
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Book 4</p>
+            <h3 class="mt-3 text-2xl font-semibold text-slate-900">When Your Parent Moves In</h3>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              A guide to one of the most emotionally loaded family shifts in caregiving: sharing a home, redefining boundaries, and making that arrangement workable in real life.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="../books/when-your-parent-moves-in.html" class="btn-secondary inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold transition">View Book Page</a>
+            </div>
+          </article>
+
+          <article class="rounded-[1.75rem] border border-slate-200 bg-[var(--paper)] p-8">
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Book 6</p>
+            <h3 class="mt-3 text-2xl font-semibold text-slate-900">When You’re Running on Empty</h3>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              A burnout-focused entry for caregivers who are depleted, stretched thin, and trying to keep functioning while carrying too much for too long.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="../books/when-youre-running-on-empty.html" class="btn-secondary inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold transition">View Book Page</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-slate-200 bg-white">
+      <div class="container-width mx-auto px-6 py-16 lg:py-20">
+        <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">Author Bio</p>
+            <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900">Steady guidance for hard family seasons</h2>
+            <div class="mt-6 space-y-5 text-base leading-8 text-slate-600">
+              <p>
+                Claire Whitaker writes for adult children who need practical help, not vague reassurance. Her books speak to the real tension of caregiving: responsibility, uncertainty, guilt, exhaustion, and the pressure to make decisions that affect a parent’s dignity and safety.
+              </p>
+              <p>
+                Through the Caring For Aging Parents series, she offers accessible, structured support for families navigating the turning points that so often arrive without a clear roadmap.
+              </p>
+            </div>
+          </div>
+
+          <aside class="rounded-[1.75rem] bg-[var(--sand)] p-8 ring-soft">
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Reader Path</p>
+            <ol class="mt-5 space-y-4 text-base leading-7 text-slate-700">
+              <li><span class="font-semibold text-slate-900">1.</span> Start with the author overview here.</li>
+              <li><span class="font-semibold text-slate-900">2.</span> Visit the series page for reading order and full context.</li>
+              <li><span class="font-semibold text-slate-900">3.</span> Continue to individual book pages for retailer links and detailed descriptions.</li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-[#f7f8f6]">
+    <div class="container-width mx-auto px-6 py-10">
+      <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="text-lg font-semibold text-slate-900">Clear Ledger Publishing</p>
+          <p class="mt-2 max-w-xl text-sm leading-7 text-slate-600">
+            Independent fiction and nonfiction designed with clear positioning, strong reader pathways, and long-term series value.
+          </p>
+        </div>
+        <nav aria-label="Footer navigation" class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700">
+          <a href="../catalog.html" class="hover:text-slate-900">Catalog</a>
+          <a href="../authors.html" class="hover:text-slate-900">Authors</a>
+          <a href="../series/caring-for-aging-parents.html" class="hover:text-slate-900">Series</a>
+          <a href="../about.html" class="hover:text-slate-900">About</a>
+          <a href="../contact.html" class="hover:text-slate-900">Contact</a>
+        </nav>
+      </div>
+      <p class="mt-8 text-sm text-slate-500">© 2026 Clear Ledger Publishing. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
