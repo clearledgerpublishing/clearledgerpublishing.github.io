@@ -94,7 +94,7 @@
         linear-gradient(180deg, #120d17 0%, #0b0910 100%);
     }
 
-    h1, h2, h3, h4, .display-font {
+    h1, h2, h3, h4, .display-font, blockquote {
       font-family: "Cormorant Garamond", serif;
     }
 
@@ -191,6 +191,13 @@
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 1.25rem;
+    }
+
+    .quote-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.025) 100%);
+      border: 1px solid rgba(231, 201, 156, 0.16);
+      border-radius: 1.5rem;
+      box-shadow: var(--shadow);
     }
 
     .section-banner {
@@ -317,7 +324,19 @@
       </div>
     </section>
 
-    <section class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+    <section class="mx-auto max-w-5xl px-6 py-10 lg:px-8">
+      <div class="quote-card p-8 md:p-10 text-center">
+        <p class="kicker mb-4">Beta Reader Reaction</p>
+        <blockquote class="mx-auto max-w-4xl text-3xl leading-tight text-white sm:text-4xl">
+          “This felt like stepping into a fog-soaked harbor where every glance meant something. The chemistry is sharp, the atmosphere is gorgeous, and the sheriff is exactly the kind of hero I wanted to keep reading for.”
+        </blockquote>
+        <p class="mt-5 text-sm uppercase tracking-[0.18em] text-[var(--gold-soft)]">
+          Early Beta Reader
+        </p>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-2 lg:px-8 lg:py-4">
       <div class="grid gap-4 md:grid-cols-3">
         <div class="info-card p-6">
           <p class="kicker mb-3">What to Expect</p>
