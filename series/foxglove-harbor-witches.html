@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foxglove Harbor Witches | Clear Ledger Publishing</title>
+  <meta
+    name="description"
+    content="Discover Foxglove Harbor Witches, a paranormal romance series by Arden Ashwood featuring witches, wolves, harbor fog, supernatural secrets, and interconnected love stories."
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --ink: #1f2937;
+      --soft-ink: #4b5563;
+      --muted: #6b7280;
+      --paper: #f7f8f6;
+      --white: #ffffff;
+      --line: #d9e1dc;
+      --sage-dark: #567366;
+      --plum: #6f5b78;
+      --plum-dark: #584661;
+      --mist: #f0ebf3;
+      --sand: #efe7dd;
+      --shadow: 0 18px 40px rgba(31, 41, 55, 0.08);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #fbfafc 0%, #f4f1f6 100%);
+    }
+
+    h1, h2, h3, h4, .serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .container-width {
+      max-width: 1200px;
+    }
+
+    .card-shadow {
+      box-shadow: var(--shadow);
+    }
+
+    .ring-soft {
+      border: 1px solid rgba(111, 91, 120, 0.18);
+    }
+
+    .hero-grid {
+      background:
+        radial-gradient(circle at top left, rgba(111, 91, 120, 0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(239, 231, 221, 0.55), transparent 28%),
+        linear-gradient(135deg, #fbf9fc 0%, #f0ecf4 100%);
+    }
+
+    .section-fade {
+      background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(248,245,250,1) 100%);
+    }
+
+    .btn-primary {
+      background: var(--plum-dark);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #4a3853;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--plum-dark);
+      border: 1px solid rgba(88, 70, 97, 0.22);
+    }
+
+    .btn-secondary:hover {
+      background: #faf7fc;
+    }
+
+    .accent-panel {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.20), rgba(255,255,255,0.06)),
+        linear-gradient(135deg, #765f82 0%, #4e3f57 100%);
+      color: white;
+    }
+
+    .cover-card {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04)),
+        linear-gradient(135deg, #7a6586 0%, #594a63 100%);
+      min-height: 290px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover-card.alt-1 {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04)),
+        linear-gradient(135deg, #806783 0%, #5f4e60 100%);
+    }
+
+    .cover-card.alt-2 {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04)),
+        linear-gradient(135deg, #66788f 0%, #4b5b70 100%);
+    }
+
+    .cover-card.alt-3 {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04)),
+        linear-gradient(135deg, #7e6d5f 0%, #5a4d43 100%);
+    }
+
+    .cover-card.alt-4 {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04)),
+        linear-gradient(135deg, #8a7267 0%, #614d45 100%);
+    }
+
+    .cover-meta {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      right: 1rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .cover-title {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      top: 28%;
+      color: white;
+      text-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    }
+
+    .cover-author {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.94);
+    }
+  </style>
+</head>
+<body>
+  <header class="border-b border-slate-200/80 bg-white/90 backdrop-blur">
+    <div class="container-width mx-auto px-6">
+      <div class="flex flex-col gap-5 py-5 md:flex-row md:items-center md:justify-between">
+        <a href="../index.html" class="text-xl font-semibold tracking-tight text-slate-900">
+          Clear Ledger Publishing
+        </a>
+        <nav aria-label="Main navigation" class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700">
+          <a href="../index.html" class="hover:text-slate-900">Home</a>
+          <a href="../catalog.html" class="hover:text-slate-900">Catalog</a>
+          <a href="../authors.html" class="hover:text-slate-900">Authors</a>
+          <a href="../series/caring-for-aging-parents.html" class="text-slate-900">Series</a>
+          <a href="../about.html" class="hover:text-slate-900">About</a>
+          <a href="../contact.html" class="hover:text-slate-900">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-grid border-b border-slate-200/70">
+      <div class="container-width mx-auto grid gap-12 px-6 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:py-24">
+        <div>
+          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">
+            Series
+          </p>
+          <h1 class="max-w-4xl text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">
+            Foxglove Harbor Witches
+          </h1>
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">
+            A paranormal romance series of witches, wolves, harbor fog, secrets, and interconnected love stories.
+          </p>
+          <p class="mt-5 max-w-3xl text-base leading-8 text-slate-600">
+            Foxglove Harbor Witches is built as an immersive series world rather than a loose pile of titles. Each book offers a distinct romantic arc while deepening the setting, expanding the supernatural network around the harbor, and strengthening the reader’s reason to continue through the series.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="../foxglove-harbor/index.html" class="btn-primary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">
+              Enter Foxglove Harbor
+            </a>
+            <a href="#reading-order" class="btn-secondary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">
+              View Reading Order
+            </a>
+          </div>
+        </div>
+
+        <aside class="rounded-[2rem] bg-white p-8 card-shadow ring-soft">
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Series Snapshot</p>
+          <div class="mt-6 space-y-5">
+            <div>
+              <p class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Author</p>
+              <p class="mt-2 text-base leading-7 text-slate-700">Arden Ashwood</p>
+            </div>
+            <div>
+              <p class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Genre</p>
+              <p class="mt-2 text-base leading-7 text-slate-700">Paranormal romance / romantic fantasy</p>
+            </div>
+            <div>
+              <p class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Signature Elements</p>
+              <p class="mt-2 text-base leading-7 text-slate-700">Witches, wolves, harbor atmosphere, supernatural secrets, emotional tension</p>
+            </div>
+            <div>
+              <p class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Best Entry Point</p>
+              <p class="mt-2 text-base leading-7 text-slate-700">Start with Book One, then continue in order for the strongest series momentum</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-fade">
+      <div class="container-width mx-auto px-6 py-16 lg:py-20">
+        <div class="grid gap-8 lg:grid-cols-3">
+          <div class="rounded-[1.75rem] bg-white p-8 card-shadow ring-soft">
+            <h2 class="text-2xl font-semibold text-slate-900">What readers get</h2>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Atmospheric paranormal romance with strong couple chemistry, supernatural pressure, and a setting designed to feel alive across multiple books.
+            </p>
+          </div>
+          <div class="rounded-[1.75rem] bg-white p-8 card-shadow ring-soft">
+            <h2 class="text-2xl font-semibold text-slate-900">How the series works</h2>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Each title stands on its own romantic arc while feeding the larger read-through engine of Foxglove Harbor as a recurring world.
+            </p>
+          </div>
+          <div class="rounded-[1.75rem] bg-white p-8 card-shadow ring-soft">
+            <h2 class="text-2xl font-semibold text-slate-900">Where to go next</h2>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Use this page as your publisher-side series overview, then move into the dedicated Foxglove Harbor site for the full immersive experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reading-order" class="border-y border-slate-200/70 bg-[var(--mist)]/70">
+      <div class="container-width mx-auto px-6 py-16 lg:py-20">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">Reading Order</p>
+          <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">
+            Start at the harbor and continue deeper into the world
+          </h2>
+          <p class="mt-5 text-base leading-8 text-slate-600">
+            The books are designed to reward in-order reading, with each installment deepening the setting, strengthening continuity, and broadening the supernatural and romantic stakes.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="cover-card rounded-[1.75rem] card-shadow">
+            <p class="cover-meta">Book One</p>
+            <div class="cover-title">
+              <p class="serif text-2xl font-bold leading-tight">The Bookshop Witch and the Wolf Sheriff</p>
+            </div>
+            <p class="cover-author">Arden Ashwood</p>
+          </article>
+
+          <article class="cover-card alt-1 rounded-[1.75rem] card-shadow">
+            <p class="cover-meta">Book Two</p>
+            <div class="cover-title">
+              <p class="serif text-2xl font-bold leading-tight">The Apothecary Witch and the Wolf Detective</p>
+            </div>
+            <p class="cover-author">Arden Ashwood</p>
+          </article>
+
+          <article class="cover-card alt-2 rounded-[1.75rem] card-shadow">
+            <p class="cover-meta">Book Three</p>
+            <div class="cover-title">
+              <p class="serif text-2xl font-bold leading-tight">The Lighthouse Witch and the Sea Wolf</p>
+            </div>
+            <p class="cover-author">Arden Ashwood</p>
+          </article>
+
+          <article class="cover-card alt-3 rounded-[1.75rem] card-shadow">
+            <p class="cover-meta">Book Four</p>
+            <div class="cover-title">
+              <p class="serif text-2xl font-bold leading-tight">The Librarian Witch and the Shadow Wolf</p>
+            </div>
+            <p class="cover-author">Arden Ashwood</p>
+          </article>
+
+          <article class="cover-card alt-4 rounded-[1.75rem] card-shadow md:col-span-2 xl:col-span-2">
+            <p class="cover-meta">Book Five</p>
+            <div class="cover-title">
+              <p class="serif text-2xl font-bold leading-tight">The Bakery Witch and the Iron Wolf</p>
+            </div>
+            <p class="cover-author">Arden Ashwood</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container-width mx-auto px-6 py-16 lg:py-20">
+        <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">Why This Page Exists</p>
+            <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">
+              A bridge from publisher browsing into the dedicated series destination
+            </h2>
+            <p class="mt-6 text-base leading-8 text-slate-600">
+              On the main Clear Ledger site, this page gives readers the publisher-context version of Foxglove Harbor: what the series is, who writes it, and how to start. The full branded experience lives on the dedicated Foxglove Harbor sub-site, where the mood, assets, and series presentation can go much deeper.
+            </p>
+            <p class="mt-5 text-base leading-8 text-slate-600">
+              That structure lets the publisher site stay organized while giving the fiction line a stronger, more immersive identity than a standard catalog page would allow.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="../foxglove-harbor/index.html" class="btn-primary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">
+                Visit the Full Series Site
+              </a>
+              <a href="../authors/arden-ashwood.html" class="btn-secondary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">
+                Meet Arden Ashwood
+              </a>
+            </div>
+          </div>
+
+          <aside class="accent-panel rounded-[2rem] p-8 card-shadow">
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-white/75">Reader Entry Point</p>
+            <p class="mt-5 text-base leading-8 text-white/90">
+              New to the series? Start with Book One. Already interested in the atmosphere and world? Enter the dedicated Foxglove Harbor site and browse the books, mood, and series materials there.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-[#f7f8f6]">
+    <div class="container-width mx-auto px-6 py-10">
+      <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="text-lg font-semibold text-slate-900">Clear Ledger Publishing</p>
+          <p class="mt-2 max-w-xl text-sm leading-7 text-slate-600">
+            Independent fiction and nonfiction designed with clear positioning, strong reader pathways, and long-term series value.
+          </p>
+        </div>
+        <nav aria-label="Footer navigation" class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700">
+          <a href="../catalog.html" class="hover:text-slate-900">Catalog</a>
+          <a href="../authors.html" class="hover:text-slate-900">Authors</a>
+          <a href="../about.html" class="hover:text-slate-900">About</a>
+          <a href="../contact.html" class="hover:text-slate-900">Contact</a>
+        </nav>
+      </div>
+      <p class="mt-8 text-sm text-slate-500">© 2026 Clear Ledger Publishing. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
