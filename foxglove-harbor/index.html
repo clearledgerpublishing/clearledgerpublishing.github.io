@@ -69,11 +69,11 @@
 
   <style>
     :root {
-      --bg: #0b0910;
-      --panel: rgba(20, 15, 27, 0.88);
-      --line: rgba(231, 201, 156, 0.15);
+      --panel: rgba(19, 14, 25, 0.84);
+      --panel-strong: rgba(18, 14, 24, 0.94);
+      --line: rgba(231, 201, 156, 0.14);
       --text: #f6efe8;
-      --muted: #cebfaf;
+      --muted: #cfbfae;
       --gold-soft: #f3dfbf;
       --shadow: 0 20px 46px rgba(0, 0, 0, 0.34);
     }
@@ -84,7 +84,7 @@
       font-family: "Inter", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top, rgba(104, 69, 123, 0.16), transparent 30%),
+        radial-gradient(circle at top, rgba(104, 69, 123, 0.15), transparent 30%),
         linear-gradient(180deg, #120d17 0%, #0b0910 100%);
     }
 
@@ -97,16 +97,17 @@
       isolation: isolate;
       overflow: hidden;
       background:
-        linear-gradient(180deg, rgba(10, 7, 14, 0.40) 0%, rgba(10, 7, 14, 0.72) 54%, rgba(10, 7, 14, 0.92) 100%),
+        linear-gradient(180deg, rgba(9, 7, 13, 0.46) 0%, rgba(9, 7, 13, 0.68) 48%, rgba(9, 7, 13, 0.88) 100%),
         url("images/hero-harbor-bg.jpg") center/cover no-repeat;
     }
 
     .hero::after {
       content: "";
       position: absolute;
-      inset: auto 0 0 0;
-      height: 180px;
-      background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(238,234,242,0.04) 35%, rgba(238,234,242,0) 100%);
+      inset: 0;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(210, 184, 140, 0.08), transparent 24%),
+        radial-gradient(circle at 78% 18%, rgba(163, 131, 185, 0.08), transparent 20%);
       pointer-events: none;
       z-index: -1;
     }
@@ -116,6 +117,12 @@
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
       backdrop-filter: blur(10px);
+    }
+
+    .panel-strong {
+      background: var(--panel-strong);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
     }
 
     .kicker {
@@ -161,33 +168,32 @@
       border-color: rgba(224, 193, 143, 0.32);
     }
 
-    .tag {
+    .genre-pill {
       border-radius: 9999px;
-      padding: 0.75rem 1rem;
+      padding: 0.7rem 1rem;
       background: rgba(255,255,255,0.035);
       border: 1px solid rgba(224, 193, 143, 0.14);
       color: var(--gold-soft);
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
     }
 
-    .hero-art {
-      border-radius: 2rem;
+    .feature-grid-card {
       overflow: hidden;
+      border-radius: 1.75rem;
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
-      min-height: 480px;
       background: rgba(255,255,255,0.03);
     }
 
-    .hero-art img {
+    .feature-grid-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
 
-    .mini-card {
+    .info-card {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.08);
       border-radius: 1.25rem;
@@ -248,7 +254,7 @@
       padding: 2rem;
       display: flex;
       align-items: end;
-      background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.68) 100%);
+      background: linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.70) 100%);
     }
 
     .link {
@@ -305,73 +311,68 @@
 
   <main id="main-content">
     <section class="hero">
-      <div class="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:py-24">
-        <div class="flex flex-col justify-center">
-          <p class="kicker mb-5">A Foxglove Harbor Witches Series</p>
+      <div class="mx-auto max-w-6xl px-6 py-24 text-center lg:px-8 lg:py-32">
+        <p class="kicker mb-5">A Foxglove Harbor Witches Series</p>
 
-          <h1 class="text-5xl font-semibold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
-            Witches. Wolves. Desire. Secrets buried beneath the fog.
-          </h1>
+        <h1 class="mx-auto max-w-5xl text-5xl font-semibold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
+          Witches. Wolves. Dangerous longing in a haunted coastal town.
+        </h1>
 
-          <p class="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)] sm:text-xl">
-            In Foxglove Harbor, witches and wolf shifters collide in a fog-drenched coastal town where magic has a price, danger feels intimate, and every romance opens the door to deeper secrets.
-          </p>
+        <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[var(--muted)] sm:text-xl">
+          Foxglove Harbor is a paranormal romance series where witches and wolf shifters collide, secrets simmer beneath the fog, and every love story pulls readers deeper into the town’s magic.
+        </p>
 
-          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href="#series-books" class="btn-primary">Browse the Series</a>
-            <a href="reading-order.html" class="btn-secondary">Reading Order</a>
-          </div>
-
-          <div class="mt-10 flex flex-wrap gap-3">
-            <span class="tag">Paranormal romance</span>
-            <span class="tag">Witches and wolf shifters</span>
-            <span class="tag">Small-town coastal magic</span>
-            <span class="tag">Books in order</span>
-          </div>
+        <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a href="#series-books" class="btn-primary">Start the Series</a>
+          <a href="reading-order.html" class="btn-secondary">See Reading Order</a>
         </div>
 
-        <div class="hero-art">
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <span class="genre-pill">Paranormal romance</span>
+          <span class="genre-pill">Witches and wolf shifters</span>
+          <span class="genre-pill">Small-town coastal magic</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-14 lg:px-8">
+      <div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div class="feature-grid-card min-h-[420px]">
           <img
             src="images/series-featured-collage.jpg"
             alt="Foxglove Harbor Witches series collage featuring magical couples, harbor atmosphere, and a wolf"
             loading="eager"
           />
         </div>
-      </div>
-    </section>
 
-    <section class="mx-auto max-w-7xl px-6 py-14 lg:px-8">
-      <div class="panel rounded-[2rem] p-8 md:p-10">
-        <div class="grid gap-6 lg:grid-cols-[1fr_0.88fr] lg:items-center">
-          <div>
-            <p class="kicker mb-4">Enter Foxglove Harbor</p>
-            <h2 class="text-4xl font-semibold text-white sm:text-5xl">
-              A witch romance series built for binge readers.
-            </h2>
-            <p class="mt-5 max-w-3xl text-lg leading-8 text-[var(--muted)]">
-              Each book follows a different couple, but the harbor, the lore, and the emotional stakes deepen across the full series. Start with Book One for the best entry point, then follow the town’s magic, mysteries, and romances in order.
-            </p>
-          </div>
+        <div class="panel rounded-[2rem] p-8 md:p-10">
+          <p class="kicker mb-4">Why Readers Stay</p>
+          <h2 class="text-4xl font-semibold text-white sm:text-5xl">
+            A witch romance series built for binge reading.
+          </h2>
+          <p class="mt-5 text-lg leading-8 text-[var(--muted)]">
+            Each book follows a different couple, but the harbor, the lore, and the emotional stakes deepen across the full series. Start with Book One, then keep going for more magic, more danger, and more interconnected romance.
+          </p>
 
-          <div class="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-            <div class="mini-card p-5">
+          <div class="mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+            <div class="info-card p-5">
               <p class="kicker mb-2">Core Promise</p>
               <p class="text-sm leading-7 text-[var(--muted)]">
                 Atmospheric paranormal romance with dangerous attraction, quiet magic, and protective heroes.
               </p>
             </div>
 
-            <div class="mini-card p-5">
+            <div class="info-card p-5">
               <p class="kicker mb-2">For Readers Who Love</p>
               <p class="text-sm leading-7 text-[var(--muted)]">
-                Witch romance, wolf shifter romance, small-town fantasy, and interconnected love stories.
+                Witch romance, wolf shifter romance, small-town fantasy, and interconnected books in order.
               </p>
             </div>
 
-            <div class="mini-card p-5">
+            <div class="info-card p-5">
               <p class="kicker mb-2">Best Starting Point</p>
               <p class="text-sm leading-7 text-[var(--muted)]">
-                Begin with Book One, then move through the series in reading order.
+                Begin with Book One for the cleanest entry into Foxglove Harbor.
               </p>
             </div>
           </div>
@@ -386,7 +387,7 @@
           Start with the first spark. Stay for the whole harbor.
         </h2>
         <p class="mt-5 text-lg leading-8 text-[var(--muted)]">
-          Start here if you want the clearest path into the series, then keep going for deeper lore, sharper tension, and new couples across Foxglove Harbor.
+          New readers should be able to see the series fast, understand the mood fast, and know exactly where to begin.
         </p>
       </div>
 
@@ -407,14 +408,14 @@
                 The Bookshop Witch and the Wolf Sheriff
               </h3>
               <p class="mt-4 text-base leading-8 text-[var(--muted)]">
-                The gateway into Foxglove Harbor: a moody, romantic beginning that introduces the town, the magic, and a hero who is every bit as dangerous as he is impossible to resist.
+                The gateway into Foxglove Harbor: a moody, romantic beginning that introduces the town, the magic, and a sheriff hero who is every bit as dangerous as he is impossible to resist.
               </p>
               <div class="mt-6 flex flex-wrap gap-3">
                 <a href="books/bookshop-witch-and-the-wolf-sheriff.html" class="btn-primary text-sm">
-                  View Book Page
+                  View Book One
                 </a>
                 <a href="reading-order.html" class="btn-secondary text-sm">
-                  See Reading Order
+                  Reading Order
                 </a>
               </div>
             </div>
@@ -435,7 +436,7 @@
               The Apothecary Witch and the Wolf Detective
             </p>
             <p class="mt-3 text-sm leading-7 text-[var(--muted)]">
-              An apothecary witch. A relentless wolf detective. A darker investigation with sharper chemistry and secrets that cut closer to home.
+              An apothecary witch. A relentless wolf detective. A darker investigation with sharper chemistry and secrets that cut close to home.
             </p>
             <a href="books/apothecary-witch-and-the-wolf-detective.html" class="mt-4 inline-block link font-semibold">
               View book page →
@@ -475,7 +476,7 @@
               The Librarian Witch and the Shadow Wolf
             </p>
             <p class="mt-3 text-sm leading-7 text-[var(--muted)]">
-              Hidden knowledge, old loyalties, and a shadowed wolf hero make this the most secret-soaked and dangerous romance in the harbor.
+              Hidden knowledge, old loyalties, and a shadowed wolf hero make this the most secret-soaked romance in the harbor.
             </p>
             <a href="books/librarian-witch-and-the-shadow-wolf.html" class="mt-4 inline-block link font-semibold">
               View book page →
@@ -519,7 +520,7 @@
               Moody coastal magic. Dangerous men. Addictive romance.
             </h2>
             <p class="mt-4 text-base leading-7 text-white/85 sm:text-lg">
-              If you love witch romance, wolf shifter romance, and small-town paranormal series with interconnected books, Foxglove Harbor was built for that exact reading mood.
+              If you love witch romance, wolf shifter romance, and small-town paranormal series with interconnected books, Foxglove Harbor is built for exactly that reading mood.
             </p>
           </div>
         </div>
