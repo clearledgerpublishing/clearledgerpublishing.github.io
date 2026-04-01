@@ -6,7 +6,7 @@
   <title>Clear Ledger Publishing | Independent Fiction and Nonfiction</title>
   <meta
     name="description"
-    content="Clear Ledger Publishing publishes independent fiction and nonfiction with strong series branding, practical reader pathways, and market-focused presentation."
+    content="Clear Ledger Publishing publishes independent fiction and nonfiction with a focus on strong storytelling, practical guidance, and reader-first discovery."
   />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,399 +16,307 @@
     rel="stylesheet"
   />
   <style>
-    :root {
-      --ink: #1f2937;
-      --soft-ink: #4b5563;
-      --muted: #6b7280;
-      --paper: #f7f8f6;
-      --white: #ffffff;
-      --line: #d9e1dc;
-      --sage: #7a9b8c;
-      --sage-dark: #567366;
-      --mist: #e8efeb;
-      --sand: #efe7dd;
-      --plum: #6f5b78;
-      --plum-dark: #584661;
-      --shadow: 0 18px 40px rgba(31, 41, 55, 0.08);
-    }
-
-    html {
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8f5ef;
+      color: #1f1a17;
       scroll-behavior: smooth;
     }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--ink);
-      background: linear-gradient(180deg, #f8faf8 0%, #f3f5f3 100%);
-    }
-
-    h1, h2, h3, h4, .serif {
+    h1, h2, h3, .display-font {
       font-family: 'Playfair Display', serif;
     }
 
-    .container-width {
-      max-width: 1200px;
-    }
-
-    .card-shadow {
-      box-shadow: var(--shadow);
-    }
-
-    .ring-soft {
-      border: 1px solid rgba(122, 155, 140, 0.18);
-    }
-
-    .hero-bg {
+    .hero-glow {
       background:
-        radial-gradient(circle at top left, rgba(122, 155, 140, 0.16), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(239, 231, 221, 0.6), transparent 28%),
-        linear-gradient(135deg, #fbfcfb 0%, #eef2ef 100%);
+        radial-gradient(circle at top right, rgba(107, 45, 92, 0.14), transparent 28%),
+        radial-gradient(circle at left center, rgba(164, 126, 43, 0.10), transparent 30%),
+        linear-gradient(180deg, #fcfbf8 0%, #f5efe6 100%);
     }
 
-    .section-fade {
-      background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(247,248,246,1) 100%);
+    .card-soft {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(6px);
     }
 
-    .btn-primary {
-      background: var(--sage-dark);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: #486156;
-    }
-
-    .btn-secondary {
-      background: white;
-      color: var(--sage-dark);
-      border: 1px solid rgba(86, 115, 102, 0.22);
-    }
-
-    .btn-secondary:hover {
-      background: #f8fbf9;
-    }
-
-    .btn-plum {
-      background: var(--plum-dark);
-      color: white;
-    }
-
-    .btn-plum:hover {
-      background: #4b3954;
-    }
-
-    .series-fantasy {
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.05)),
-        linear-gradient(135deg, #6d5878 0%, #4e3f57 100%);
-    }
-
-    .series-caregiving {
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.36), rgba(255,255,255,0.10)),
-        linear-gradient(135deg, #b7c8c0 0%, #829a8f 100%);
-    }
-
-    .author-fantasy {
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0.05)),
-        linear-gradient(135deg, #7c6887 0%, #584963 100%);
-    }
-
-    .author-caregiving {
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.40), rgba(255,255,255,0.08)),
-        linear-gradient(135deg, #c9d5cf 0%, #91a79d 100%);
+    .gold-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #b08b3b, transparent);
     }
   </style>
 </head>
-<body>
-  <header class="border-b border-slate-200/80 bg-white/90 backdrop-blur">
-    <div class="container-width mx-auto px-6">
-      <div class="flex flex-col gap-5 py-5 md:flex-row md:items-center md:justify-between">
-        <a href="index.html" class="text-xl font-semibold tracking-tight text-slate-900">
-          Clear Ledger Publishing
-        </a>
+<body class="antialiased">
 
-        <nav aria-label="Main navigation" class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700">
-          <a href="index.html" class="text-slate-900">Home</a>
-          <a href="catalog.html" class="hover:text-slate-900">Catalog</a>
-          <a href="authors.html" class="hover:text-slate-900">Authors</a>
-          <a href="series/caring-for-aging-parents.html" class="hover:text-slate-900">Series</a>
-          <a href="submissions.html" class="hover:text-slate-900">Submissions</a>
-          <a href="about.html" class="hover:text-slate-900">About</a>
-          <a href="contact.html" class="hover:text-slate-900">Contact</a>
-        </nav>
-      </div>
+  <header class="sticky top-0 z-50 border-b border-stone-200 bg-[#fbf8f3]/95 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <a href="/index.html" class="text-xl font-semibold tracking-wide text-stone-900">
+        Clear Ledger Publishing
+      </a>
+
+      <nav class="hidden gap-6 text-sm font-medium md:flex">
+        <a href="/index.html" class="text-stone-800 hover:text-[#6b2d5c]">Home</a>
+        <a href="/catalog.html" class="text-stone-800 hover:text-[#6b2d5c]">Catalog</a>
+        <a href="/authors/index.html" class="text-stone-800 hover:text-[#6b2d5c]">Authors</a>
+        <a href="/foxglove-harbor/index.html" class="text-stone-800 hover:text-[#6b2d5c]">Foxglove Harbor</a>
+        <a href="#contact" class="text-stone-800 hover:text-[#6b2d5c]">Contact</a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero-bg border-b border-slate-200/70">
-      <div class="container-width mx-auto grid gap-12 px-6 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:py-24">
+    <section class="hero-glow border-b border-stone-200">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
         <div>
-          <p class="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">
+          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-stone-600">
             Independent Publisher
           </p>
-          <h1 class="max-w-4xl text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">
-            Clear Ledger Publishing
+
+          <h1 class="display-font max-w-4xl text-5xl leading-tight text-stone-900 sm:text-6xl">
+            Stories and practical books built to earn a reader’s next click.
           </h1>
-          <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">
-            Independent fiction and nonfiction with strong series branding, practical reader pathways, and market-focused presentation.
-          </p>
-          <p class="mt-5 max-w-3xl text-base leading-8 text-slate-600">
-            Explore paranormal romance, practical caregiving guides, and a growing catalog built around clear positioning, author identity, and pages designed to help readers move naturally from discovery to series loyalty.
+
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-stone-700">
+            Clear Ledger Publishing publishes independent fiction and nonfiction with an emphasis on strong packaging,
+            clear positioning, and clean reader pathways across books, authors, and series.
           </p>
 
           <div class="mt-8 flex flex-wrap gap-4">
-            <a href="catalog.html" class="btn-primary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">
-              Browse Books
+            <a
+              href="/catalog.html"
+              class="rounded-full bg-stone-900 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-black"
+            >
+              Browse the Catalog
             </a>
-            <a href="authors.html" class="btn-secondary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">
-              Meet Our Authors
+            <a
+              href="/authors/index.html"
+              class="rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-semibold text-stone-900 transition hover:-translate-y-0.5 hover:border-stone-400"
+            >
+              Meet the Authors
             </a>
           </div>
         </div>
 
-        <aside class="rounded-[2rem] bg-white p-8 card-shadow ring-soft">
-          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Browse the Publisher</p>
-          <div class="mt-6 space-y-5">
-            <div>
-              <p class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Fiction</p>
-              <p class="mt-2 text-base leading-7 text-slate-700">
-                Series-led genre fiction with strong cover identity, continuity, and read-through focus.
-              </p>
-            </div>
-            <div>
-              <p class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Nonfiction</p>
-              <p class="mt-2 text-base leading-7 text-slate-700">
-                Practical guides built to solve real-world reader problems with clear structure and usable advice.
-              </p>
-            </div>
-            <div>
-              <p class="text-sm font-medium uppercase tracking-[0.18em] text-slate-500">Reader Paths</p>
-              <p class="mt-2 text-base leading-7 text-slate-700">
-                Discover by book, author, or series depending on how you prefer to browse.
-              </p>
-            </div>
+        <aside class="card-soft rounded-3xl border border-stone-200 p-7 shadow-sm">
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#6b2d5c]">
+            Featured Reader Path
+          </p>
+          <h2 class="display-font text-3xl text-stone-900">
+            Foxglove Harbor Witches
+          </h2>
+          <p class="mt-4 text-base leading-7 text-stone-700">
+            A dedicated paranormal romance branch with witches, wolves, coastal atmosphere, and linked books designed
+            to reward series reading.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a
+              href="/foxglove-harbor/index.html"
+              class="rounded-full bg-[#6b2d5c] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+            >
+              Visit Series Home
+            </a>
+            <a
+              href="/foxglove-harbor/reading-order.html"
+              class="rounded-full border border-stone-300 bg-white px-5 py-3 text-sm font-semibold text-stone-900 transition hover:-translate-y-0.5"
+            >
+              Reading Order
+            </a>
           </div>
         </aside>
       </div>
     </section>
 
-    <section class="section-fade">
-      <div class="container-width mx-auto px-6 py-16 lg:py-20">
-        <div class="max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">Featured Series</p>
-          <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">
-            Start with the strongest reader pathways
-          </h2>
-          <p class="mt-5 text-base leading-8 text-slate-600">
-            These are the current flagship series branches on the site: one built for immersive fiction readers, one built for practical nonfiction readers.
+    <section class="mx-auto max-w-7xl px-6 py-20">
+      <div class="max-w-3xl">
+        <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-stone-600">
+          What We Publish
+        </p>
+        <h2 class="display-font text-4xl text-stone-900 sm:text-5xl">
+          Fiction with atmosphere. Nonfiction with practical value.
+        </h2>
+        <p class="mt-5 text-lg leading-8 text-stone-700">
+          The site works best when readers can immediately understand what kinds of books you publish and where to go next.
+          This homepage keeps that message simple and routes visitors into the strongest live destinations.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <article class="rounded-3xl border border-stone-200 bg-white p-7 shadow-sm">
+          <h3 class="display-font text-2xl text-stone-900">Paranormal Romance</h3>
+          <p class="mt-3 leading-7 text-stone-700">
+            Character-driven series fiction with strong hooks, repeatable branding, and room for read-through.
           </p>
-        </div>
+        </article>
 
-        <div class="mt-10 grid gap-6 lg:grid-cols-2">
-          <article class="series-fantasy rounded-[2rem] p-8 text-white card-shadow">
-            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-white/75">Paranormal Romance Series</p>
-            <h3 class="mt-4 text-3xl font-semibold">Foxglove Harbor Witches</h3>
-            <p class="mt-5 max-w-xl text-base leading-8 text-white/90">
-              A moody, interconnected paranormal romance world of witches, wolves, harbor fog, secrets, and escalating romantic stakes.
-            </p>
-            <div class="mt-8 flex flex-wrap gap-3">
-              <a href="foxglove-harbor/index.html" class="btn-secondary inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold transition">
-                Visit Series
-              </a>
-              <a href="catalog.html" class="inline-flex items-center rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10">
-                View Books
-              </a>
-            </div>
-          </article>
+        <article class="rounded-3xl border border-stone-200 bg-white p-7 shadow-sm">
+          <h3 class="display-font text-2xl text-stone-900">Practical Nonfiction</h3>
+          <p class="mt-3 leading-7 text-stone-700">
+            Clear, useful books intended to help readers navigate real problems with more confidence and less confusion.
+          </p>
+        </article>
 
-          <article class="series-caregiving rounded-[2rem] p-8 text-slate-900 card-shadow ring-soft">
-            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Practical Nonfiction Series</p>
-            <h3 class="mt-4 text-3xl font-semibold">Caregiving For Aging Parents</h3>
-            <p class="mt-5 max-w-xl text-base leading-8 text-slate-700">
-              Practical guidance for adult children dealing with aging-parent care, including housing transitions, dementia, distance caregiving, resistance, burnout, and end-of-life decisions.
-            </p>
-            <div class="mt-8 flex flex-wrap gap-3">
-              <a href="series/caring-for-aging-parents.html" class="btn-primary inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold transition">
-                Visit Series
-              </a>
-              <a href="authors/claire-whitaker.html" class="btn-secondary inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold transition">
-                Meet Claire Whitaker
-              </a>
-            </div>
-          </article>
-        </div>
+        <article class="rounded-3xl border border-stone-200 bg-white p-7 shadow-sm">
+          <h3 class="display-font text-2xl text-stone-900">Author-Led Discovery</h3>
+          <p class="mt-3 leading-7 text-stone-700">
+            Readers do not only browse by title. Good publisher sites also let them move by author and by series.
+          </p>
+        </article>
       </div>
     </section>
 
-    <section class="border-y border-slate-200/70 bg-white">
-      <div class="container-width mx-auto px-6 py-16 lg:py-20">
-        <div class="max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">Featured Authors</p>
-          <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">
-            Author hubs with distinct reader promises
-          </h2>
-          <p class="mt-5 text-base leading-8 text-slate-600">
-            Each author page should function as a real entry point, not a dead-end bio.
-          </p>
-        </div>
-
-        <div class="mt-10 grid gap-6 lg:grid-cols-2">
-          <article class="author-fantasy rounded-[2rem] p-8 text-white card-shadow">
-            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-white/75">Fiction Author</p>
-            <h3 class="mt-4 text-3xl font-semibold">Arden Ashwood</h3>
-            <p class="mt-5 max-w-xl text-base leading-8 text-white/90">
-              Writes romantic fantasy and paranormal romance with atmospheric settings, supernatural tension, and series momentum.
+    <section class="border-y border-stone-200 bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-20">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-3xl">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-stone-600">
+              Start Here
             </p>
-            <div class="mt-8">
-              <a href="catalog.html" class="btn-secondary inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold transition">
-                Browse Fiction
-              </a>
-            </div>
-          </article>
-
-          <article class="author-caregiving rounded-[2rem] p-8 text-slate-900 card-shadow ring-soft">
-            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Nonfiction Author</p>
-            <h3 class="mt-4 text-3xl font-semibold">Claire Whitaker</h3>
-            <p class="mt-5 max-w-xl text-base leading-8 text-slate-700">
-              Writes calm, practical guides for adult children facing the difficult realities of elder care, burnout, transitions, and family decision-making.
-            </p>
-            <div class="mt-8">
-              <a href="authors/claire-whitaker.html" class="btn-primary inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold transition">
-                Visit Author Page
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-[var(--paper)]">
-      <div class="container-width mx-auto px-6 py-16 lg:py-20">
-        <div class="max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">From the Catalog</p>
-          <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">
-            Browse by current publishing lane
-          </h2>
-          <p class="mt-5 text-base leading-8 text-slate-600">
-            Use the catalog for full book browsing, or jump directly into a lane below.
-          </p>
-        </div>
-
-        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <article class="rounded-[1.75rem] bg-white p-8 ring-soft card-shadow">
-            <p class="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">Series Fiction</p>
-            <h3 class="mt-4 text-2xl font-semibold text-slate-900">Foxglove Harbor Titles</h3>
-            <p class="mt-4 text-base leading-8 text-slate-600">
-              Discover the currently published and in-progress paranormal romance books connected to the Foxglove Harbor world.
-            </p>
-            <div class="mt-6">
-              <a href="foxglove-harbor/index.html" class="btn-plum inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold transition">
-                Explore Foxglove Harbor
-              </a>
-            </div>
-          </article>
-
-          <article class="rounded-[1.75rem] bg-white p-8 ring-soft card-shadow">
-            <p class="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">Practical Guides</p>
-            <h3 class="mt-4 text-2xl font-semibold text-slate-900">Caregiving Books</h3>
-            <p class="mt-4 text-base leading-8 text-slate-600">
-              Practical books for adult children facing elder-care decisions, family strain, distance, and caregiver burnout.
-            </p>
-            <div class="mt-6">
-              <a href="series/caring-for-aging-parents.html" class="btn-primary inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold transition">
-                Explore Caregiving Guides
-              </a>
-            </div>
-          </article>
-
-          <article class="rounded-[1.75rem] bg-white p-8 ring-soft card-shadow">
-            <p class="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">Full Discovery</p>
-            <h3 class="mt-4 text-2xl font-semibold text-slate-900">Complete Catalog</h3>
-            <p class="mt-4 text-base leading-8 text-slate-600">
-              View the full publishing catalog, browse by author or series, and use this as the broadest entry point into the site.
-            </p>
-            <div class="mt-6">
-              <a href="catalog.html" class="btn-secondary inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold transition">
-                Open Catalog
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="border-t border-slate-200 bg-white">
-      <div class="container-width mx-auto px-6 py-16 lg:py-20">
-        <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">Submissions</p>
-            <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">
-              Query a publisher focused on positioning and presentation
+            <h2 class="display-font text-4xl text-stone-900 sm:text-5xl">
+              Strongest current entry points
             </h2>
-            <p class="mt-6 text-base leading-8 text-slate-600">
-              Clear Ledger Publishing is building a selective list centered on commercially legible fiction and practical nonfiction with strong author identity, clear market positioning, and serious packaging standards.
+            <p class="mt-5 text-lg leading-8 text-stone-700">
+              These are the clearest routes for a new visitor landing on the publisher homepage.
             </p>
-            <p class="mt-5 text-base leading-8 text-slate-600">
-              Before querying, review the current catalog and submission guidelines so you can judge fit accurately.
-            </p>
-            <div class="mt-8 flex flex-wrap gap-4">
-              <a href="submissions.html" class="btn-primary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">
-                Read Submission Guidelines
-              </a>
-              <a href="catalog.html" class="btn-secondary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">
-                Review the Catalog
-              </a>
-            </div>
           </div>
+        </div>
 
-          <aside class="rounded-[1.75rem] bg-[var(--mist)] p-8 ring-soft">
-            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Current Priorities</p>
-            <ul class="mt-5 space-y-4 text-base leading-7 text-slate-700">
-              <li>Series-minded genre fiction with strong branding potential</li>
-              <li>Practical nonfiction with clear reader need and strong category fit</li>
-              <li>Projects that benefit from strong landing pages, discoverability, and author/series architecture</li>
-            </ul>
-          </aside>
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+          <a
+            href="/catalog.html"
+            class="group rounded-3xl border border-stone-200 bg-[#faf7f2] p-7 transition hover:-translate-y-1 hover:shadow-md"
+          >
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-stone-600">Catalog</p>
+            <h3 class="display-font mt-3 text-3xl text-stone-900">Browse All Titles</h3>
+            <p class="mt-4 leading-7 text-stone-700">
+              A broad entry point for visitors who want to see the full list rather than start with one author or series.
+            </p>
+            <span class="mt-6 inline-block font-semibold text-[#6b2d5c]">Open catalog →</span>
+          </a>
+
+          <a
+            href="/authors/index.html"
+            class="group rounded-3xl border border-stone-200 bg-[#faf7f2] p-7 transition hover:-translate-y-1 hover:shadow-md"
+          >
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-stone-600">Authors</p>
+            <h3 class="display-font mt-3 text-3xl text-stone-900">Meet the Authors</h3>
+            <p class="mt-4 leading-7 text-stone-700">
+              A cleaner route for readers who connect first to voice, tone, and category identity.
+            </p>
+            <span class="mt-6 inline-block font-semibold text-[#6b2d5c]">View author directory →</span>
+          </a>
+
+          <a
+            href="/foxglove-harbor/index.html"
+            class="group rounded-3xl border border-stone-200 bg-[#faf7f2] p-7 transition hover:-translate-y-1 hover:shadow-md"
+          >
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-stone-600">Series</p>
+            <h3 class="display-font mt-3 text-3xl text-stone-900">Foxglove Harbor</h3>
+            <p class="mt-4 leading-7 text-stone-700">
+              The most developed branded branch on the site and the clearest fiction-led path for a browsing visitor.
+            </p>
+            <span class="mt-6 inline-block font-semibold text-[#6b2d5c]">Enter the series →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 py-20">
+      <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+        <div>
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-stone-600">
+            About the Press
+          </p>
+          <h2 class="display-font text-4xl text-stone-900 sm:text-5xl">
+            Clear presentation matters.
+          </h2>
+          <p class="mt-5 text-lg leading-8 text-stone-700">
+            Publisher websites do not need to be complicated, but they do need to be coherent. The homepage should explain
+            the list, point at real destinations, and make the company feel intentional.
+          </p>
+          <div class="mt-8 gold-line w-full max-w-md"></div>
+        </div>
+
+        <div class="rounded-3xl border border-stone-200 bg-white p-8 shadow-sm">
+          <h3 class="display-font text-2xl text-stone-900">Current homepage goals</h3>
+          <ul class="mt-5 space-y-4 text-stone-700">
+            <li>Route readers to pages that actually exist.</li>
+            <li>Center the strongest live brand branch.</li>
+            <li>Keep the publisher identity broad enough for multiple genres.</li>
+            <li>Make author and catalog discovery obvious from the first screen.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="border-t border-stone-200 bg-[#f2ece3]">
+      <div class="mx-auto max-w-7xl px-6 py-20">
+        <div class="max-w-3xl">
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-stone-600">
+            Contact
+          </p>
+          <h2 class="display-font text-4xl text-stone-900 sm:text-5xl">
+            Get in touch
+          </h2>
+          <p class="mt-5 text-lg leading-8 text-stone-700">
+            For general inquiries, rights questions, or business contact, use the email below.
+          </p>
+
+          <div class="mt-8 rounded-3xl border border-stone-300 bg-white p-8 shadow-sm">
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-stone-600">
+              Email
+            </p>
+            <a
+              href="mailto:hello@clearledgerpublishing.com"
+              class="mt-3 inline-block text-xl font-semibold text-[#6b2d5c] hover:underline"
+            >
+              hello@clearledgerpublishing.com
+            </a>
+            <p class="mt-4 leading-7 text-stone-700">
+              You can replace this address with your preferred public-facing contact email.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-slate-200 bg-[#f7f8f6]">
-    <div class="container-width mx-auto px-6 py-10">
-      <div class="grid gap-8 md:grid-cols-3">
-        <div>
-          <p class="text-lg font-semibold text-slate-900">Clear Ledger Publishing</p>
-          <p class="mt-3 max-w-sm text-sm leading-7 text-slate-600">
-            Independent fiction and nonfiction built around strong positioning, clean reader pathways, and long-term series value.
-          </p>
-        </div>
-
-        <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">Explore</p>
-          <nav aria-label="Footer explore navigation" class="mt-4 flex flex-col gap-2 text-sm text-slate-700">
-            <a href="catalog.html" class="hover:text-slate-900">Catalog</a>
-            <a href="authors.html" class="hover:text-slate-900">Authors</a>
-            <a href="series/caring-for-aging-parents.html" class="hover:text-slate-900">Series</a>
-            <a href="foxglove-harbor/index.html" class="hover:text-slate-900">Foxglove Harbor</a>
-          </nav>
-        </div>
-
-        <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">Company</p>
-          <nav aria-label="Footer company navigation" class="mt-4 flex flex-col gap-2 text-sm text-slate-700">
-            <a href="submissions.html" class="hover:text-slate-900">Submissions</a>
-            <a href="about.html" class="hover:text-slate-900">About</a>
-            <a href="contact.html" class="hover:text-slate-900">Contact</a>
-          </nav>
-        </div>
+  <footer class="border-t border-stone-200 bg-[#fbf8f3]">
+    <div class="mx-auto grid max-w-7xl gap-10 px-6 py-12 md:grid-cols-3">
+      <div>
+        <div class="text-lg font-semibold text-stone-900">Clear Ledger Publishing</div>
+        <p class="mt-3 text-sm leading-7 text-stone-600">
+          Independent fiction and nonfiction with cleaner discovery, stronger presentation, and better reader pathways.
+        </p>
       </div>
 
-      <p class="mt-10 text-sm text-slate-500">© 2026 Clear Ledger Publishing. All rights reserved.</p>
+      <div>
+        <div class="text-sm font-semibold uppercase tracking-[0.18em] text-stone-600">Explore</div>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="/catalog.html" class="text-stone-700 hover:text-[#6b2d5c]">Catalog</a></li>
+          <li><a href="/authors/index.html" class="text-stone-700 hover:text-[#6b2d5c]">Authors</a></li>
+          <li><a href="/foxglove-harbor/index.html" class="text-stone-700 hover:text-[#6b2d5c]">Foxglove Harbor</a></li>
+          <li><a href="/foxglove-harbor/reading-order.html" class="text-stone-700 hover:text-[#6b2d5c]">Reading Order</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="text-sm font-semibold uppercase tracking-[0.18em] text-stone-600">Contact</div>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li>
+            <a href="mailto:hello@clearledgerpublishing.com" class="text-stone-700 hover:text-[#6b2d5c]">
+              hello@clearledgerpublishing.com
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="text-stone-700 hover:text-[#6b2d5c]">
+              Contact section
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-stone-200 px-6 py-5 text-center text-xs text-stone-500">
+      © 2026 Clear Ledger Publishing. All rights reserved.
     </div>
   </footer>
 </body>
