@@ -1,1 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>When You're Running on Empty | Clear Ledger Publishing</title>
+  <meta
+    name="description"
+    content="When You're Running on Empty by Claire Whitaker is a practical guide to sustaining yourself while caregiving for an aging parent. Book 6 of The Practical Caregiving Series from Clear Ledger Publishing."
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1f2937;
+      --soft-ink: #4b5563;
+      --muted: #6b7280;
+      --paper: #f7f8f6;
+      --white: #ffffff;
+      --line: #d9e1dc;
+      --sage: #7a9b8c;
+      --sage-dark: #567366;
+      --mist: #e8efeb;
+      --sand: #efe7dd;
+      --ember: #8b6f62;
+      --shadow: 0 18px 40px rgba(31, 41, 55, 0.08);
+    }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f8faf8 0%, #f3f5f3 100%);
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .container-width {
+      max-width: 1200px;
+    }
+
+    .card-shadow {
+      box-shadow: var(--shadow);
+    }
+
+    .ring-soft {
+      border: 1px solid rgba(122, 155, 140, 0.18);
+    }
+
+    .hero-grid {
+      background:
+        radial-gradient(circle at top left, rgba(122, 155, 140, 0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(239, 231, 221, 0.65), transparent 30%),
+        linear-gradient(135deg, #fbfcfb 0%, #eef2ef 100%);
+    }
+
+    .btn-primary {
+      background: var(--sage-dark);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #486156;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--sage-dark);
+      border: 1px solid rgba(86, 115, 102, 0.22);
+    }
+
+    .btn-secondary:hover {
+      background: #f8fbf9;
+    }
+
+    .kicker {
+      letter-spacing: 0.28em;
+    }
+
+    .book-cover {
+      aspect-ratio: 2 / 3;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.46), rgba(255,255,255,0.10)),
+        linear-gradient(135deg, #cbbcaf 0%, #a48d7c 42%, #7b6658 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .book-cover::before {
+      content: "The Practical Caregiving Series · Book 6";
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+      right: 1.25rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .book-cover::after {
+      content: "Claire Whitaker";
+      position: absolute;
+      bottom: 1.25rem;
+      left: 1.25rem;
+      right: 1.25rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.95);
+    }
+
+    .cover-title {
+      position: absolute;
+      left: 1.25rem;
+      right: 1.25rem;
+      top: 24%;
+      color: white;
+      text-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    }
+
+    .topic-card {
+      background: white;
+      border: 1px solid rgba(122, 155, 140, 0.18);
+      box-shadow: var(--shadow);
+    }
+  </style>
+</head>
+<body>
+  <header class="border-b border-slate-200/80 bg-white/90 backdrop-blur">
+    <div class="container-width mx-auto px-6">
+      <div class="flex flex-col gap-5 py-5 md:flex-row md:items-center md:justify-between">
+        <a href="../index.html" class="text-xl font-semibold tracking-tight text-slate-900">Clear Ledger Publishing</a>
+        <nav aria-label="Main navigation" class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700">
+          <a href="../index.html" class="hover:text-slate-900">Home</a>
+          <a href="../catalog.html" class="hover:text-slate-900">Catalog</a>
+          <a href="../authors/claire-whitaker.html" class="hover:text-slate-900">Author</a>
+          <a href="../series/caring-for-aging-parents.html" class="hover:text-slate-900">Series</a>
+          <a href="../about.html" class="hover:text-slate-900">About</a>
+          <a href="../contact.html" class="hover:text-slate-900">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-grid border-b border-slate-200/70">
+      <div class="container-width mx-auto grid gap-12 px-6 py-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:py-24">
+        <div class="mx-auto w-full max-w-sm">
+          <div class="book-cover rounded-[2rem] card-shadow ring-soft">
+            <div class="cover-title">
+              <p class="serif text-3xl font-bold leading-tight md:text-4xl">When You're Running on Empty</p>
+              <p class="mt-5 text-sm font-medium uppercase tracking-[0.18em] text-white/90">
+                A practical guide to sustaining yourself while caregiving for an aging parent
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="kicker mb-4 text-sm font-semibold uppercase text-slate-500">The Practical Caregiving Series · Book 6</p>
+          <h1 class="max-w-4xl text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">When You're Running on Empty</h1>
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">
+            A practical guide to sustaining yourself while caregiving for an aging parent.
+          </p>
+          <p class="mt-5 max-w-3xl text-base leading-8 text-slate-600">
+            This book is written for the adult child who became the default caregiver through proximity, guilt, love, habit, or family inertia—and is now trying to survive the physical, emotional, financial, relational, and identity costs of carrying too much for too long. It treats caregiving burnout as a structural problem, not a character flaw.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#overview" class="btn-primary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">Read Overview</a>
+            <a href="../authors/claire-whitaker.html" class="btn-secondary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">Author Page</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="bg-white">
+      <div class="container-width mx-auto px-6 py-16 lg:py-20">
+        <div class="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
+          <div>
+            <p class="kicker text-sm font-semibold uppercase text-slate-500">Overview</p>
+            <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">A survival guide for the caregiver whose own life is starting to collapse under the load</h2>
+            <div class="mt-6 space-y-5 text-base leading-8 text-slate-600">
+              <p>
+                Most caregiving books focus on the aging parent. This one focuses on what prolonged caregiving is doing to the adult child: the burnout, the forbidden emotions, the career damage, the family-system imbalance, the body under chronic strain, the partnership under siege, the daily grind that nobody photographs, and the identity erosion that happens when caregiving becomes the central fact of your life.
+              </p>
+              <p>
+                <strong class="text-slate-900">When You're Running on Empty</strong> is intentionally direct. It is not interested in sentimentalizing sacrifice. It is interested in helping a caregiver stay alive, functional, and structurally supported long enough to keep going—or to change the arrangement before collapse forces the decision.
+              </p>
+              <p>
+                The manuscript frames burnout not as weakness but as math: one person is doing work that paid systems typically distribute across multiple roles and shifts. That framing gives the book unusual clarity and practical force.
+              </p>
+            </div>
+          </div>
+
+          <aside class="rounded-[1.75rem] bg-[var(--mist)] p-8 ring-soft">
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Best For Readers Facing</p>
+            <ul class="mt-5 space-y-4 text-base leading-7 text-slate-700">
+              <li>Caregiver burnout that feels physical, relational, or financial—not just emotional</li>
+              <li>Uneven sibling labor, escalating logistics, and the sense of being the single point of failure</li>
+              <li>Dementia caregiving, live-in caregiving, or the collapse of work-life boundaries under care demands</li>
+              <li>A need for actual structure, delegation, and survival systems instead of vague reassurance</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-slate-200/70 bg-[var(--mist)]/60">
+      <div class="container-width mx-auto px-6 py-16 lg:py-20">
+        <div class="max-w-3xl">
+          <p class="kicker text-sm font-semibold uppercase text-slate-500">What This Book Covers</p>
+          <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">Burnout, systems burden, and the long-haul cost of caregiving</h2>
+          <p class="mt-5 text-base leading-8 text-slate-600">
+            The book is organized around six major domains: what caregiving is doing to the caregiver, the systems burden that accumulates around the parent’s care, the daily grind, self-protection, relationships under strain, and the long road of identity damage and eventual recovery.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-2">
+          <article class="topic-card rounded-[1.75rem] p-8">
+            <h3 class="text-2xl font-semibold text-slate-900">Recognizing burnout and the emotions nobody validates</h3>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              A blunt look at fraying, overfunctioning, impairment, collapse risk, resentment, rage, relief, numbness, guilt, and the specific emotional reality of sustained caregiving.
+            </p>
+          </article>
+
+          <article class="topic-card rounded-[1.75rem] p-8">
+            <h3 class="text-2xl font-semibold text-slate-900">Family systems, money, housing, and medical complexity</h3>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Practical guidance for siblings who do not show up, career and income loss, the real costs of care, home-versus-facility decisions, and the maze of fragmented medical systems.
+            </p>
+          </article>
+
+          <article class="topic-card rounded-[1.75rem] p-8">
+            <h3 class="text-2xl font-semibold text-slate-900">Emergency planning and the daily operational grind</h3>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              How to prepare for aide failure, parent crises, your own illness, and the daily invisible load of medications, meals, safety monitoring, sleep disruption, and constant background calculation.
+            </p>
+          </article>
+
+          <article class="topic-card rounded-[1.75rem] p-8">
+            <h3 class="text-2xl font-semibold text-slate-900">Dementia caregiving and the collapse of ordinary rules</h3>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              The manuscript includes dedicated coverage of dementia as a caregiving category that changes communication, ethics, nighttime vigilance, and the threshold for when home stops functioning as a home.
+            </p>
+          </article>
+
+          <article class="topic-card rounded-[1.75rem] p-8">
+            <h3 class="text-2xl font-semibold text-slate-900">Boundaries, delegation, and protecting the caregiver’s body</h3>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Real boundaries rather than polite requests, task transfer rather than vague “help,” building a care map, and confronting the measurable physical damage caregiving is doing to the caregiver.
+            </p>
+          </article>
+
+          <article class="topic-card rounded-[1.75rem] p-8">
+            <h3 class="text-2xl font-semibold text-slate-900">Marriage, friendships, identity, crisis, and what comes after</h3>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              How caregiving distorts intimacy, shrinks social life, erodes selfhood, creates collapse points, and eventually leaves the caregiver to rebuild a life that caregiving consumed.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container-width mx-auto px-6 py-16 lg:py-20">
+        <div class="grid gap-8 lg:grid-cols-3">
+          <div class="rounded-[1.75rem] bg-[var(--paper)] p-8 ring-soft">
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Reader Promise</p>
+            <p class="mt-4 text-base leading-8 text-slate-700">
+              Practical guidance that helps the caregiver survive structurally, not just feel momentarily encouraged.
+            </p>
+          </div>
+
+          <div class="rounded-[1.75rem] bg-[var(--paper)] p-8 ring-soft">
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Ideal Reader</p>
+            <p class="mt-4 text-base leading-8 text-slate-700">
+              An adult child carrying unsustainable caregiving labor and needing honest language, systems, scripts, and tools rather than romanticized advice about sacrifice.
+            </p>
+          </div>
+
+          <div class="rounded-[1.75rem] bg-[var(--paper)] p-8 ring-soft">
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Series Context</p>
+            <p class="mt-4 text-base leading-8 text-slate-700">
+              The manuscript places this book as <strong>Book 6 of The Practical Caregiving Series</strong>, following the assisted-living, live-in, long-distance, dementia, and end-of-life volumes. It is positioned as the caregiver-sustainability volume within that line.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-slate-200 bg-[var(--paper)]">
+      <div class="container-width mx-auto px-6 py-16 lg:py-20">
+        <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <p class="kicker text-sm font-semibold uppercase text-slate-500">Inside the Book</p>
+            <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">Structural honesty instead of caregiving mythology</h2>
+            <p class="mt-6 text-base leading-8 text-slate-600">
+              What makes this manuscript stand out is its refusal to flatter the reader with noble-sacrifice language. It insists instead on specificity: burnout staging, forbidden emotions as information, sibling archetypes, job and money math, care maps, emergency contingency plans, operational routines, body-failure signals, and scripts that help the caregiver actually move labor off themselves instead of simply enduring more pain quietly.
+            </p>
+            <p class="mt-5 text-base leading-8 text-slate-600">
+              The author framing reinforces that credibility. The closing materials position Claire Whitaker as a geriatric social worker whose work grew out of direct clinical exposure to family systems collapsing under caregiving load—not abstract lifestyle coaching. That grounding matters, and it shows in the manuscript’s tone.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="../authors/claire-whitaker.html" class="btn-primary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">Author Page</a>
+              <a href="../catalog.html" class="btn-secondary inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold transition">Back to Catalog</a>
+            </div>
+          </div>
+
+          <aside class="rounded-[1.75rem] bg-white p-8 card-shadow ring-soft">
+            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Author</p>
+            <h3 class="mt-4 text-2xl font-semibold text-slate-900">Claire Whitaker</h3>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Claire Whitaker is presented in the manuscript as a geriatric social worker with extensive front-line experience helping adult children navigate aging-parent care, collapsing systems, and the practical burden of caregiving that exceeds what one person can carry alone.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-[#f7f8f6]">
+    <div class="container-width mx-auto px-6 py-10">
+      <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="text-lg font-semibold text-slate-900">Clear Ledger Publishing</p>
+          <p class="mt-2 max-w-xl text-sm leading-7 text-slate-600">
+            Independent fiction and nonfiction designed with clear positioning, strong reader pathways, and long-term series value.
+          </p>
+        </div>
+        <nav aria-label="Footer navigation" class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-700">
+          <a href="../catalog.html" class="hover:text-slate-900">Catalog</a>
+          <a href="../authors/claire-whitaker.html" class="hover:text-slate-900">Author</a>
+          <a href="../about.html" class="hover:text-slate-900">About</a>
+          <a href="../contact.html" class="hover:text-slate-900">Contact</a>
+        </nav>
+      </div>
+      <p class="mt-8 text-sm text-slate-500">© 2026 Clear Ledger Publishing. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
